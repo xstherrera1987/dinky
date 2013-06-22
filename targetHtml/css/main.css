@@ -1,0 +1,361 @@
+@charset "UTF-8";
+
+/* import Arvo from Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Arvo:400,700,400italic);
+
+/* MeyerWeb Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    padding: 10px 50px 0 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #232323;
+    background-color: #FBFAF7;
+    margin: 0;
+    line-height: 1.8em;
+}
+
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #232323;
+    margin: 24px 0 10px;
+}
+h1, h2, h3 {
+    font-family: Arvo, Monaco, serif;
+    line-height: 1.3;
+    font-weight: normal;
+}
+h1, h2, h3 {
+    display: block;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 5px;
+}
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4, h5, h6 {
+    font-family: Arvo, Monaco, serif;
+    font-weight: 700;
+}
+
+/* Text Elements */
+p, ul, ol, table, dl {
+    margin: 0 0 22px;
+}
+a {
+    color: #000099;
+    font-weight: 200;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a small {
+    font-size: 12px;
+}
+em {
+    font-style: italic;
+}
+strong {
+    font-weight: 700;
+}
+ul li {
+    list-style: inside;
+    padding-left: 25px;
+}
+ li {
+    list-style: decimal inside;
+    padding-left: 20px;
+}
+blockquote {
+    margin: 0;
+    padding: 0 0 0 20px;
+    font-style: italic;
+}
+dl, dt, dd, dl p {
+    font-color: #444;
+}
+dl dt {
+    font-weight: bold;
+}
+dl dd {
+    padding-left: 20px;
+    font-style: italic;
+}
+dl p {
+    padding-left: 20px;
+    font-style: italic;
+}
+hr {
+    border: 0;
+    background: #ccc;
+    height: 1px;
+    margin: 0 0 24px;
+}
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+.quote {
+    font-style:italic;
+}
+
+/* Images */
+img {
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+    padding: 5px;
+    margin: 10px 0 32px 0;
+    border: 1px solid #ccc;
+}
+
+/* Code blocks */
+code, pre {
+    font-family: Monaco, Terminal, monospace;
+    color: #000;
+    font-size: 14px;
+}
+pre {
+    padding: 4px 12px;
+    background: #FDFEFB;
+    border-radius: 4px;
+    border: 1px solid #D7D8C8;
+    overflow: auto;
+    overflow-y: hidden;
+    margin-bottom: 32px;
+}
+/* psuedo code */
+.pseudoDeclaration {
+    font-weight: bold;
+}
+.pseudoCodeIndent1 {
+    padding-left: 2em;
+}
+.var {
+    font-style:italic;
+    font-weight: bold;
+}
+.function {
+    font-weight: bold;
+    font-style:normal;
+}
+
+/* Tables */
+/* TODO: revise this */
+table {
+    width: 100%;
+}
+table {
+    border: 1px solid #ccc;
+    margin-bottom: 32px;
+    text-align: left;
+}
+th {
+    font-family: 'Arvo', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px;
+    background: #232323;
+    color: #FDFEFB;
+}
+td {
+    padding: 10px;
+    background: #ccc;
+}
+
+/* Wrapper */
+.wrapper {
+    width: 960px;
+}
+
+/* Header */
+header {
+    background-color: #171717;
+    float: left;
+    position: fixed;
+    border: 1px solid #000;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 34px 25px 22px 50px;
+    margin: 30px 25px 0 0;
+}
+header h1, 
+header h2, 
+header a {
+    color:#FFFFFF;
+}
+header h2 {
+    font-size: 16px;
+    border-bottom: 0;
+}
+header h1 {
+    font-family: Arvo, sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.3em;
+    border-bottom: 0;
+    margin-top: 0;
+    border-top: 0;
+}
+
+/* Header Buttons */
+header ul {
+    list-style: none;
+    padding: 0;
+}
+header li {
+    list-style-type: none;
+    width: 132px;
+    height: 15px;
+    margin-bottom: 12px;
+    line-height: 1em;
+    padding: 6px 6px 6px 7px;
+    
+    background: #AF0011;
+    border-radius: 4px;
+    border: 1px solid #0D0D0D;
+}
+header li:hover {
+    background: #C3001D;
+    background: linear-gradient(top, #C3001D 0%,#950119 100%);
+}
+header a.button {
+    font-weight: normal;
+    text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+    padding: 2px 2px 2px 22px;
+    height: 30px;
+    white-space: nowrap;
+}
+header a.buttons:hover {
+    text-decoration: none;
+}
+#linkedin {
+    background: url(../img/arrow-down.png) no-repeat 1px;
+}
+#github {
+    background: url(../img/octocat-small.png) no-repeat 1px;
+}
+#bitbucket {
+    background: url(../img/bitbucket_icon.png) no-repeat 1px;
+}
+
+/* main page content */
+#main {
+    border-top: 0;
+    width: 650px;
+    float: right;
+    padding-bottom: 50px;
+    margin-top: 0;
+}
+
+/* Footer */
+footer {
+    width: 170px;
+    float: left;
+    position: fixed;
+    bottom: 10px;
+    padding-left: 50px;
+}
+footer p {
+    font-size: 8pt;
+    margin: 0;
+}
+footer p.tiny {
+    font-size: 6pt;
+}
+
+/* regular width, but really short window: fix footer overlapping header */
+@media print, screen and (max-height:400px) and (min-width:960px) {
+	footer {
+		display: none;
+	}
+}
+
+/* classic computer screen size (1024x768) and old iphones: */
+/* header at the top, footer at the bottom, content in between */
+@media print, screen and (max-width: 960px) {
+
+    div.wrapper {
+        width: auto;
+        margin: 0;
+    }
+
+    header, #main, footer {
+        float: none;
+        position: static;
+        width: auto;
+    }
+
+    footer {
+        border-top: 1px solid #ccc;
+        margin: 0 84px 0 50px;
+        padding: 0;
+    }
+
+    header {
+        padding-right: 320px;
+        margin-top: 0;
+    }
+
+    #main {
+        padding: 20px 84px 20px 50px;
+        margin: 0 0 20px;
+    }
+
+    header ul {
+        position: absolute;
+        right: 130px;
+        top: 44px;
+    }
+}
+
+/* small and medium phones: use vertical layout */
+@media print, screen and (max-width: 720px) {
+    header {
+        padding: 10px 20px 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    #main {
+        padding: 10px 0 10px 20px;
+        margin: 0 0 30px;
+    }
+
+    footer {
+        margin: 0 0 0 30px;
+    }
+
+    header ul, header p.view {
+        position: static;
+    }
+}
+
+/* for PrintPreview and actual paper prints */
+@media print {
+    body {
+        color: #000000 !important;
+        background-color: #FFFFFF !important;
+        border: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    header, footer {
+        display: none;
+    }
+}

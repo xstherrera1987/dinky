@@ -1,0 +1,13 @@
+# ignore backups
+*~
+
+# ignore OSX cache files
+._.DS_Store
+/**/._.DS_Store
+.DS_Store # ignore OSX _notes directory
+_notes
+
+# server files
+.htaccess
+*.log
+
