@@ -1,6 +1,6 @@
 "Dinky" Wordpress Theme adapted from [Github Pages Dinky Theme](https://github.com/broccolini/dinky) for [my blog](http://xstherrera1987.github.io) (coming soon).
 
-using Wordpress 3.5.2, HTML5, CSS3, PHP(?)
+using Wordpress 3.5, HTML5, CSS3, PHP5.2
 
 pull requests welcomed
 

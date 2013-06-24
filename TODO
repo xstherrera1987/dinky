@@ -1,1 +1,4 @@
 adapt original.html to mainPage, blogPost, 404, etc..
+
+make IE upgrade banner dismissable (add an X to close)
+and set and check for a cookie so we don't further irritate by that message

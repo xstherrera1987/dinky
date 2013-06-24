@@ -54,7 +54,7 @@ h4, h5, h6 {
 
 /* Text Elements */
 p, ul, ol, table, dl {
-    margin: 0 0 22px;
+    margin: 0 0 14px;
 }
 a {
     color: #000099;
@@ -139,6 +139,9 @@ pre {
     overflow-y: hidden;
     margin-bottom: 32px;
 }
+code .minified {
+	text-wrap: unrestricted;
+}
 /* psuedo code */
 .pseudoDeclaration {
     font-weight: bold;
@@ -191,7 +194,7 @@ header {
     border: 1px solid #000;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-    padding: 34px 25px 22px 50px;
+    padding: 34px 40px 22px 50px;
     margin: 30px 25px 0 0;
 }
 header h1, 
@@ -200,7 +203,7 @@ header a {
     color:#FFFFFF;
 }
 header h2 {
-    font-size: 16px;
+    font-size: 12px;
     border-bottom: 0;
 }
 header h1 {
@@ -220,12 +223,11 @@ header ul {
 }
 header li {
     list-style-type: none;
-    width: 132px;
+    width: 152px;
     height: 15px;
     margin-bottom: 12px;
     line-height: 1em;
     padding: 6px 6px 6px 7px;
-    
     background: #AF0011;
     border-radius: 4px;
     border: 1px solid #0D0D0D;
@@ -237,21 +239,11 @@ header li:hover {
 header a.button {
     font-weight: normal;
     text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
-    padding: 2px 2px 2px 22px;
     height: 30px;
     white-space: nowrap;
 }
 header a.buttons:hover {
     text-decoration: none;
-}
-#linkedin {
-    background: url(../img/arrow-down.png) no-repeat 1px;
-}
-#github {
-    background: url(../img/octocat-small.png) no-repeat 1px;
-}
-#bitbucket {
-    background: url(../img/bitbucket_icon.png) no-repeat 1px;
 }
 
 /* main page content */
@@ -279,8 +271,18 @@ footer p.tiny {
     font-size: 6pt;
 }
 
+
+/* banner to inform IE users to upgrade */
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* TODO header height changed, revise this */
 /* regular width, but really short window: fix footer overlapping header */
-@media print, screen and (max-height:400px) and (min-width:960px) {
+@media print, screen and (max-height:480px) and (min-width:960px) {
 	footer {
 		display: none;
 	}
@@ -310,6 +312,7 @@ footer p.tiny {
     header {
         padding-right: 320px;
         margin-top: 0;
+        min-height: 200px;
     }
 
     #main {
