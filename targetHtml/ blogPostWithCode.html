@@ -4,7 +4,7 @@
 <!--[if IE 8]>		<html class="no-js lt-ie9"> <![endif]-->
 <html>
 	<head>
-		<title>CompSci & SoftwareEng Blog (xst)</title>
+		<title>Load jQuery onto a webpage you are Viewing (xst)</title>
 		<meta name="description" content="CompSci & SoftwareEng Blog - Joe Herrera">
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -60,25 +60,23 @@
 					<h3>Load by using the browser's Javascript Console</h3>
 					<p>
 						The javascript console method is the most straight-forward. Just copy and paste this code into it and execute.
-						It's inconvenient however, if you're going to do this often. 
 					</p>
 					<code class="prettyprint">
-(function() {<br />
-&nbsp;&nbsp;var head = document.getElementsByTagName('head')[0];<br />
-&nbsp;&nbsp;var script = document.createElement('script');<br />
-&nbsp;&nbsp;script.type = 'text/javascript';<br />
-&nbsp;&nbsp;script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js';<br />
-&nbsp;&nbsp;head.appendChild(script);<br />
-&nbsp;&nbsp;setTimeout( function() {<br />
-&nbsp;&nbsp;&nbsp;&nbsp;if (jQuery) {<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert ("jQuery loaded");<br />
-&nbsp;&nbsp;&nbsp;&nbsp;} else {<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert ("jQuery loading failed");<br />
-&nbsp;&nbsp;&nbsp;&nbsp;}<br />
-&nbsp;&nbsp;},1500);<br />
-})();<br />
+var head = document.getElementsByTagName('head')[0];<br />
+var script = document.createElement('script');<br />
+script.type = 'text/javascript';<br />
+script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js';<br />
+head.appendChild(script);<br />
+setTimeout( function() {<br />
+&nbsp;&nbsp;if (jQuery) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;alert ("jQuery loaded");<br />
+&nbsp;&nbsp;} else {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;alert ("jQuery loading failed");<br />
+&nbsp;&nbsp;}<br />
+},1500);<br />
 <br />
 					</code>
+					<p>It's inconvenient however, if you're going to do this often. </p>
 					<h3>Save in a bookmark for Easy Access</h3>
 					<p>The 'javascript:' pseudo-protocol is designed to allow JS execution in the Address Bar.
 						This allows us to save this URL as a bookmark and load the library by clicking on it.		
