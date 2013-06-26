@@ -19,40 +19,61 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<header>
+			<header class="masterHeader fiveNavButtons">
 				<h1>Joe Herrera</h1>
 				<h2>CompSci &amp; SoftwareEng Blog</h2>
-				<ul>
-					<a class="button" href="#">
-						<li>Blog Main</li>
-					</a>
-					
-					<a class="button" href="#">
-						<li>CompSci & Math</li>
-					</a>
-					
-					<a class="button" href="#">
-						<li>Prototypes</li>
-					</a>
-					
-					<a class="button" href="#">
-						<li>Reference</li>
-					</a>
-					
-					<a class="button" href="#">
-						<li>Platform & API</li>
-					</a>
-				</ul>
+				<nav>
+					<!-- TODO fix invalid .masterHead > ul > a > li hierarchy -->
+					<!-- then copy the fix over to the other pages -->
+					<ul>
+						<a class="button" href="#">
+							<li>Blog Main</li>
+						</a>
+						
+						<a class="button" href="#">
+							<li>CompSci & Math</li>
+						</a>
+						
+						<a class="button" href="#">
+							<li>Prototypes</li>
+						</a>
+						
+						<a class="button" href="#">
+							<li>Reference</li>
+						</a>
+						
+						<a class="button" href="#">
+							<li>Platform & API</li>
+						</a>
+					</ul>
+				</nav>
 			</header>
 			<div id="main">
 				<!--[if lt IE 9]>
 					<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
 				<![endif]-->
-				<article id="blogPost0000">
-
+				<article id="blogPost0001">
+				<header class="entryHeader">
+					<h1>SAX API</h1>
+				</header>
+				
+				
+					Event-based sequential/stream Parser
+					
+					O(1) memory usage compared to input size
+					
+					Developer provides handlers for start/end tags and for text data within tags
+					
+					 
+					
+					Problems:
+					
+					sequential, so no efficient random access
+					
+					the document has to be reparsed in order to reread values
 				</article>
 			</div>
-			<footer>
+			<footer class="fiveNavButtons">
 				<p>
 					<small>Optimized for Modern Browsers</small>
 				</p>
