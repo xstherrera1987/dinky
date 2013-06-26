@@ -64,7 +64,7 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-a small {
+a > small {
 	font-size: 12px;
 }
 em {
@@ -73,7 +73,7 @@ em {
 strong {
 	font-weight: 700;
 }
-ul li {
+ul > li {
 	list-style: inside;
 	padding-left: 25px;
 }
@@ -84,20 +84,6 @@ li {
 blockquote {
 	margin: 0;
 	padding: 0 0 0 20px;
-	font-style: italic;
-}
-dl, dt, dd, dl p {
-	font-color: #444;
-}
-dl dt {
-	font-weight: bold;
-}
-dl dd {
-	padding-left: 20px;
-	font-style: italic;
-}
-dl p {
-	padding-left: 20px;
 	font-style: italic;
 }
 hr {
@@ -142,7 +128,7 @@ pre {
 	overflow-y: hidden;
 	margin-bottom: 32px;
 }
-code.minified {
+.minified {
 	font-size: 12px;
 	word-break: break-all;
 }
@@ -190,8 +176,8 @@ td {
 	width: 960px;
 }
 
-/* Header */
-header {
+/* Master Header */
+.masterHeader {
 	background-color: #171717;
 	float: left;
 	position: fixed;
@@ -202,14 +188,14 @@ header {
 	margin: 30px 25px 0 0;
 	-webkit-font-smoothing: antialiased;
 }
-header h1, header h2, header a {
+.masterHeader h1, .masterHeader h2, .masterHeader a {
 	color: #FFFFFF;
 }
-header h2 {
+.masterHeader h2 {
 	font-size: 12px;
 	border-bottom: 0;
 }
-header h1 {
+.masterHeader h1 {
 	font-family: Arvo, sans-serif;
 	font-size: 30px;
 	font-weight: 300;
@@ -219,12 +205,13 @@ header h1 {
 	border-top: 0;
 }
 
-/* Header Buttons */
-header ul {
+/* Master Header: the black heading with nav buttons and site title */
+/* TODO fix invalid .masterHead > ul > a > li markup */
+.masterHeader > ul {
 	list-style: none;
 	padding: 0;
 }
-header li {
+.masterHeader li {
 	list-style-type: none;
 	width: 152px;
 	height: 15px;
@@ -241,19 +228,42 @@ header li {
 	border-radius: 4px;
 	border: 1px solid #0D0D0D;
 }
-header li:hover {
+.masterHeader li:hover {
 	background: #C3001D;
 	background: linear-gradient(top, #C3001D 0%,#950119 100%);
 }
-header a.button {
+.masterHeader a.button {
 	font-weight: normal;
 	text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
 	height: 30px;
 	white-space: nowrap;
 }
-header a.buttons:hover {
+.masterHeader a.buttons:hover {
 	text-decoration: none;
 }
+/***************************************************************************/
+
+/* the header on personal/resume page has less nav buttons */
+#resumeMasterHeader {
+	padding: 34px 25px 22px 50px;
+}
+
+#resumeMasterHeader a.button {
+	padding: 2px 2px 2px 22px;
+}
+
+#linkedin {
+    background: url(../img/arrow-down.png) no-repeat 1px;
+}
+#github {
+    background: url(../img/octocat-small.png) no-repeat 1px;
+}
+#bitbucket {
+    background: url(../img/bitbucket_icon.png) no-repeat 1px;
+}
+
+
+/***************************************************************************/
 
 /* main page content */
 #main {
@@ -272,11 +282,11 @@ footer {
 	bottom: 10px;
 	padding-left: 50px;
 }
-footer p {
+footer > p {
 	font-size: 8pt;
 	margin: 0;
 }
-footer p.tiny {
+footer > p.tiny {
 	font-size: 6pt;
 }
 
@@ -288,24 +298,31 @@ footer p.tiny {
 	padding: 0.2em 0;
 }
 
-/* TODO header height changed, revise this */
+// TODO find optimal cut-off heights for all navigation counts 
 /* regular width, but really short window: fix footer overlapping header */
-@media print, screen and (max-height: 480px) and (min-width: 960px) {
-	footer {
+@media screen and (max-height: 390px) and (min-width: 960px) {
+	
+	footer.threeNavButtons {
+		display: none;
+	}
+}
+@media screen and (max-height: 480px) and (min-width: 960px) {
+	
+	footer.fiveNavButtons {
 		display: none;
 	}
 }
 
 /* classic computer screen size (1024x768) and old iphones: */
 /* header at the top, footer at the bottom, content in between */
-@media print, screen and (max-width: 960px) {
+@media screen and (max-width: 960px) {
 
-	div.wrapper {
+	.wrapper {
 		width: auto;
 		margin: 0;
 	}
 
-	header, #main, footer {
+	header.masterHeader, #main, footer {
 		float: none;
 		position: static;
 		width: auto;
@@ -317,10 +334,19 @@ footer p.tiny {
 		padding: 0;
 	}
 
-	header {
+	/* TODO determine optimal min-height for other button counts */
+	header.threeNavButtons {
+		min-height: 115px;
+	}
+	
+	header.fiveNavButtons {
+		min-height: 200px;
+	}
+
+	.masterHeader {
 		padding-right: 320px;
 		margin-top: 0;
-		min-height: 200px;
+
 	}
 
 	#main {
@@ -328,7 +354,7 @@ footer p.tiny {
 		margin: 0 0 20px;
 	}
 
-	header ul {
+	.masterHeader > ul {
 		position: absolute;
 		right: 130px;
 		top: 44px;
@@ -336,8 +362,9 @@ footer p.tiny {
 }
 
 /* small and medium phones: use vertical layout */
-@media print, screen and (max-width: 720px) {
-	header {
+@media screen and (max-width: 720px) {
+	
+	header.masterHeader {
 		padding: 10px 20px 0;
 		margin-right: 0;
 		margin-top: 0;
@@ -352,13 +379,14 @@ footer p.tiny {
 		margin: 0 0 0 30px;
 	}
 
-	header ul, header p.view {
+	header.masterHeader ul, header.masterHeader p.view {
 		position: static;
 	}
 }
 
 /* for PrintPreview and actual paper prints */
 @media print {
+	
 	body {
 		color: #000000 !important;
 		background-color: #FFFFFF !important;
@@ -366,7 +394,7 @@ footer p.tiny {
 		margin: 0 !important;
 		padding: 0 !important;
 	}
-	header, footer {
+	.masterHeader, footer {
 		display: none;
 	}
 }
