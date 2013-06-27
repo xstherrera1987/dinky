@@ -236,11 +236,48 @@ th {
 }
 .masterHeader li {
 	list-style-type: none;
+	padding-left: 0;
+}
+.navButton {
+	font-weight: normal;	
+	line-height: 1em;
+	
+	display: block;
 	width: 152px;
 	height: 15px;
-	margin-bottom: 12px;
-	line-height: 1em;
 	padding: 6px 6px 6px 7px;
+	margin-bottom: 12px;
+	
+	background: #AF0011;
+	background: linear-gradient(top, #AF0011 0%,#820011 100%);
+	background: -moz-linear-gradient(top, #AF0011 0%, #820011 100%);
+	background: -webkit-gradient(linear, top, bottom, color-stop(0%,#AF0011), color-stop(100%,#820011));
+	background: -webkit-linear-gradient(top, #AF0011 0%,#820011 100%);
+	background: -o-linear-gradient(top, #AF0011 0%,#820011 100%);
+	background: -ms-linear-gradient(top, #AF0011 0%,#820011 100%);
+	
+	border-radius: 4px;
+	border: 1px solid #0D0D0D;
+}
+.navButton:hover {
+	background: #C3001D;
+	background: linear-gradient(top, #C3001D 0%,#950119 100%);
+	text-decoration: none;
+}
+/**** Resume Page ******************************************************************/
+
+/* the header on personal/resume page has less nav buttons */
+#resumeMasterHeader {
+	padding: 34px 25px 22px 50px;
+}
+#resumeMasterHeader .navButton {
+	padding: 2px 2px 2px 22px;
+}
+#resumeMasterHeader li {
+	width: 152px;
+	height: 15px;
+	padding: 6px 6px 6px 7px;
+	margin-bottom: 12px;
 	background: #AF0011;
 	background: linear-gradient(top, #AF0011 0%,#820011 100%);
 	background: -moz-linear-gradient(top, #AF0011 0%, #820011 100%);
@@ -251,29 +288,10 @@ th {
 	border-radius: 4px;
 	border: 1px solid #0D0D0D;
 }
-.masterHeader li:hover {
-	background: #C3001D;
-	background: linear-gradient(top, #C3001D 0%,#950119 100%);
+#resumeMasterHeader .navButton {
+	border: 0;
+	width: auto;
 }
-.masterHeader a.button {
-	font-weight: normal;
-	text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
-	height: 30px;
-	white-space: nowrap;
-}
-.masterHeader a.buttons:hover {
-	text-decoration: none;
-}
-/**** Resume Page ******************************************************************/
-
-/* the header on personal/resume page has less nav buttons */
-#resumeMasterHeader {
-	padding: 34px 25px 22px 50px;
-}
-#resumeMasterHeader a.button {
-	padding: 2px 2px 2px 22px;
-}
-
 #linkedin {
     background: url(../img/arrow-down.png) no-repeat 1px;
 }
@@ -282,6 +300,12 @@ th {
 }
 #bitbucket {
     background: url(../img/bitbucket_icon.png) no-repeat 1px;
+}
+#blogLink:hover {
+	background: transparent;
+}
+#blogLink {
+	background: transparent;
 }
 /***************************************************************************/
 
@@ -320,10 +344,10 @@ footer > p.tiny {
 	padding: 0.2em 0;
 }
 
-// TODO find optimal cut-off heights for all navigation counts 
+/* TODO find optimal cut-off heights for all navigation counts */ 
 /* regular width, but really short window: fix footer overlapping header */
 @media screen and (max-height: 390px) and (min-width: 960px) {
-	
+
 	footer.threeNavButtons {
 		display: none;
 	}
