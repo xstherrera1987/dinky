@@ -16,6 +16,10 @@ revise <header> <h1>SectionTitle</h1> <p>Description</p> </header> strategy
 
 adopt / devise framebusting strategy
 
+investigate
+	<link rel="profile" href="..." />
+	<link rel="pingback" href="..." />
+
 make IE upgrade banner dismissable (add an X to close)
 and set and check for a cookie so we don't further irritate by that message
 
