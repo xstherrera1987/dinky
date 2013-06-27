@@ -156,28 +156,43 @@ pre {
 	font-style: normal;
 }
 
-/* Tables */
-/* TODO: revise this */
+/***************** Tables *********************/
 table {
 	width: 100%;
-}
-table {
-	border: 1px solid #ccc;
+	border: 1px solid #CCCCCC;
 	margin-bottom: 32px;
 	text-align: left;
 }
 th {
 	font-family: 'Arvo', Helvetica, Arial, sans-serif;
-	font-size: 18px;
 	font-weight: normal;
+}
+/* Data Tables */
+.dataTable th {
+	font-size: 14px;
+	padding: 5px;
+	background: #F0F0F0;
+}
+.dataTable td {
+	padding: 5px;
+	background: #EDEDED;
+}
+.dataTable tbody {
+	border: 1px solid #FF0000;
+}
+
+/* Big Loud Tables */
+.bigTable th {
+	font-size: 16px;
 	padding: 10px;
 	background: #232323;
 	color: #FDFEFB;
 }
-td {
+.bigTable td {
 	padding: 10px;
 	background: #ccc;
 }
+
 
 /* wrapper for entire page */
 .wrapper {
@@ -249,13 +264,12 @@ td {
 .masterHeader a.buttons:hover {
 	text-decoration: none;
 }
-/***************************************************************************/
+/**** Resume Page ******************************************************************/
 
 /* the header on personal/resume page has less nav buttons */
 #resumeMasterHeader {
 	padding: 34px 25px 22px 50px;
 }
-
 #resumeMasterHeader a.button {
 	padding: 2px 2px 2px 22px;
 }
@@ -269,8 +283,6 @@ td {
 #bitbucket {
     background: url(../img/bitbucket_icon.png) no-repeat 1px;
 }
-
-
 /***************************************************************************/
 
 /* main page content */
@@ -303,8 +315,8 @@ footer > p.tiny {
 /* banner to inform IE users to upgrade */
 .chromeframe {
 	margin: 0.2em 0;
-	background: #ccc;
-	color: #000;
+	background: #CCCCCC;
+	color: #000000;
 	padding: 0.2em 0;
 }
 
