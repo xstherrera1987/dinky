@@ -5,13 +5,16 @@ targetHTML
 
 + Implement all basic functionality needed to use this theme for my blog
 
-+ Then branch for version 2
++ + Then *(low priority)* cut a branch for version 2.
 
-+ version 2 will be configurable, etc.. 
++ + version 2 will be have
+
++ + + configurable quantity of nav buttons
+
++ + + easily configurable color scheme (WP inputs for the 2 or 3 colors actually used)
 
 ### High Priority:
 
-+ adapt original.html to mainPage, blogPost, 404, etc..
 
 
 ### Low Priority:

@@ -47,8 +47,6 @@ body {
 
 #main {
 	border-top: 0;
-	/* TODO there is a few window-widths that enable horizontal scrolling when images are 650 px */
-	/* consider make the maximum width lower and prevent scrolling for more widths */
 	width: 650px;
 	float: right;
 	padding-bottom: 50px;
@@ -84,7 +82,6 @@ body {
 }
 
 /* Master Header: the black heading with nav buttons and site title */
-/* TODO fix invalid .masterHead > ul > a > li markup */
 .masterHeader > ul {
 	list-style: none;
 	padding: 0;
@@ -103,6 +100,7 @@ body {
 	padding: 6px 6px 6px 7px;
 	margin-bottom: 12px;
 	
+	/* TODO linear gradient is not working in IE */
 	background: #AF0011;
 	background: linear-gradient(top, #AF0011 0%,#820011 100%);
 	background: -moz-linear-gradient(top, #AF0011 0%, #820011 100%);
@@ -243,9 +241,6 @@ footer > p.tiny {
 	}
 }
 
-/* TODO images at 650px stretch the page out to 650 px 
-requiring horizontal scrolling on smaller devices */
-
 /* small and medium phones: use vertical layout */
 @media screen and (max-width: 550px) {
 	
@@ -380,7 +375,7 @@ img + figcaption {
 }
 
 /*********** Code blocks ************************/
-/* TODO revise class names, hierarchy, purpose */
+/* TODO revise <code> class names, hierarchy, purpose */
 code, pre {
 	font-family: Monaco, Terminal, monospace;
 	color: #000;
