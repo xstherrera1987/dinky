@@ -1,5 +1,21 @@
 @charset "UTF-8";
 
+/* 
+	Reset
+	Structural
+		Wrapper, Main Div
+		Master Headers
+		Footer
+		Media Queries
+	Content
+		Headers
+		Text
+		Images
+		Code
+		Tables
+	Miscelanneous
+*/
+
 /* import Arvo from Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Arvo:400,700,400italic);
 
@@ -11,7 +27,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font: inherit;
 	vertical-align: baseline;
 }
-
 body {
 	padding: 10px 50px 0 0;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -23,183 +38,23 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-/* Headers */
-h1, h2, h3, h4, h5, h6 {
-	color: #232323;
-	margin: 24px 0 10px;
-}
-h1, h2, h3 {
-	font-family: Arvo, Monaco, serif;
-	line-height: 1.3;
-	font-weight: normal;
-}
-h1, h2, h3 {
-	display: block;
-	border-bottom: 1px solid #CCCCCC;
-	padding-bottom: 5px;
-}
-h1 {
-	font-size: 24px;
-}
-h2 {
-	font-size: 18px;
-}
-h3 {
-	font-size: 16px;
-}
-h4, h5, h6 {
-	font-family: Arvo, Monaco, serif;
-	font-weight: 700;
-	font-size:14px;
-}
-
-/* Text Elements */
-p, ul, ol, table, dl {
-	margin: 0 0 14px;
-}
-a {
-	color: #000099;
-	font-weight: 200;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-}
-a > small {
-	font-size: 12px;
-}
-em {
-	font-style: italic;
-}
-strong {
-	font-weight: 700;
-}
-ul > li {
-	list-style: inside;
-	padding-left: 25px;
-}
-li {
-	list-style: decimal inside;
-	padding-left: 20px;
-}
-blockquote {
-	margin: 0;
-	padding: 0 0 0 20px;
-	font-style: italic;
-}
-hr {
-	border: 0;
-	background: #ccc;
-	height: 1px;
-	margin: 0 0 24px;
-}
-sub {
-	vertical-align: sub;
-	font-size: smaller;
-}
-.quote {
-	font-style: italic;
-}
-
-/* Images */
-img {
-	position: relative;
-	margin: 0 auto;
-	width: auto;
-	height: auto;
-	max-width: 650px;
-	padding: 5px;
-	margin: 10px 0 0px 0;
-	border: 1px solid #ccc;
-}
-img + figcaption {
-	margin: 0 0 32px 0;
-	font-style:italic;
-}
-
-/* Code blocks */
-/* revise class names, hierarchy, purpose */
-code, pre {
-	font-family: Monaco, Terminal, monospace;
-	color: #000;
-	font-size: 14px;
-	word-break: break-all;
-	/* IE hack to 'gain layout' and apply word-break */
-	float: left;
-}
-pre {
-	padding: 4px 12px;
-	background: #FDFEFB;
-	border-radius: 4px;
-	border: 1px solid #D7D8C8;
-	overflow: auto;
-	overflow-y: hidden;
-	margin-bottom: 32px;
-}
-.minified {
-	font-size: 12px;
-	word-break: break-all;
-}
-/* psuedo code */
-.pseudoDeclaration {
-	font-weight: bold;
-}
-.pseudoCodeIndent1 {
-	padding-left: 2em;
-}
-.var {
-	font-style: italic;
-	font-weight: bold;
-}
-.function {
-	font-weight: bold;
-	font-style: normal;
-}
-
-/***************** Tables *********************/
-table {
-	width: 100%;
-	border: 1px solid #CCCCCC;
-	margin-bottom: 32px;
-	text-align: left;
-}
-th {
-	font-family: 'Arvo', Helvetica, Arial, sans-serif;
-	font-weight: normal;
-}
-/* Data Tables */
-.dataTable th {
-	font-size: 14px;
-	padding: 5px;
-	background: #F0F0F0;
-}
-.dataTable td {
-	padding: 5px;
-	background: #EDEDED;
-}
-.dataTable tbody {
-	border: 1px solid #FF0000;
-}
-
-/* Big Loud Tables */
-.bigTable th {
-	font-size: 16px;
-	padding: 10px;
-	background: #232323;
-	color: #FDFEFB;
-}
-.bigTable td {
-	padding: 10px;
-	background: #ccc;
-}
-
-
-/* wrapper for entire page */
+/************* Wrapper *********************************/
 .wrapper {
 	width: 960px;
 }
 
-/* Master Header */
+/******* Main Div ******************************************************/
+
+#main {
+	border-top: 0;
+	/* TODO there is a few window-widths that enable horizontal scrolling when images are 650 px */
+	/* consider make the maximum width lower and prevent scrolling for more widths */
+	width: 650px;
+	float: right;
+	padding-bottom: 50px;
+	margin-top: 0;
+}
+/*************** Master Header ********************/
 .masterHeader {
 	background-color: #171717;
 	float: left;
@@ -264,7 +119,7 @@ th {
 	background: linear-gradient(top, #C3001D 0%,#950119 100%);
 	text-decoration: none;
 }
-/**** Resume Page ******************************************************************/
+/**** Resume Page Header **************************************************/
 
 /* the header on personal/resume page has less nav buttons */
 #resumeMasterHeader {
@@ -307,20 +162,8 @@ th {
 #blogLink {
 	background: transparent;
 }
-/***************************************************************************/
 
-/* main page content */
-#main {
-	border-top: 0;
-	/* TODO there is a few window-widths that enable horizontal scrolling when images are 650 px */
-	/* consider make the maximum width lower and prevent scrolling for more widths */
-	width: 650px;
-	float: right;
-	padding-bottom: 50px;
-	margin-top: 0;
-}
-
-/* Footer */
+/************ Footer **********************************/
 footer {
 	width: 170px;
 	float: left;
@@ -336,28 +179,23 @@ footer > p.tiny {
 	font-size: 6pt;
 }
 
-/* banner to inform IE users to upgrade */
-.chromeframe {
-	margin: 0.2em 0;
-	background: #CCCCCC;
-	color: #000000;
-	padding: 0.2em 0;
-}
-
-/* TODO find optimal cut-off heights for all navigation counts */ 
+/************************* Media Queries ******************************/
+ 
 /* regular width, but really short window: fix footer overlapping header */
-@media screen and (max-height: 390px) and (min-width: 960px) {
-
-	footer.threeNavButtons {
-		display: none;
-	}
-}
 @media screen and (max-height: 480px) and (min-width: 960px) {
 	
 	footer.fiveNavButtons {
 		display: none;
 	}
 }
+/* TODO find optimal footer cut-off height for all navigation button counts */
+@media screen and (max-height: 390px) and (min-width: 960px) {
+
+	footer.threeNavButtons {
+		display: none;
+	}
+}
+
 
 /* classic computer screen size (1024x768) and old iphones: */
 /* header at the top, footer at the bottom, content in between */
@@ -368,36 +206,15 @@ footer > p.tiny {
 		margin: 0;
 	}
 
-	header.masterHeader, #main, footer {
+	.masterHeader, #main, footer {
 		float: none;
 		position: static;
 		width: auto;
 	}
 
-	footer {
-		border-top: 1px solid #ccc;
-		margin: 0 84px 0 50px;
-		padding: 0;
-	}
-
-	/* TODO determine optimal min-height for other button counts */
-	header.threeNavButtons {
-		min-height: 115px;
-	}
-	
-	header.fiveNavButtons {
-		min-height: 200px;
-	}
-
 	.masterHeader {
 		padding-right: 320px;
 		margin-top: 0;
-
-	}
-
-	#main {
-		padding: 20px 84px 20px 50px;
-		margin: 0 0 20px;
 	}
 
 	.masterHeader > ul {
@@ -405,14 +222,34 @@ footer > p.tiny {
 		right: 130px;
 		top: 44px;
 	}
+	
+	/* TODO determine optimal minimum height for .masterHeader for other button counts */
+	.masterHeader.threeNavButtons {
+		min-height: 115px;
+	}
+	.masterHeader.fiveNavButtons {
+		min-height: 200px;
+	}
+
+	#main {
+		padding: 20px 84px 20px 50px;
+		margin: 0 0 20px;
+	}
+
+	footer {
+		border-top: 1px solid #ccc;
+		margin: 0 84px 0 50px;
+		padding: 0;
+	}
 }
 
 /* TODO images at 650px stretch the page out to 650 px 
-requiring horizontal scrolling on smaller devices */ 
+requiring horizontal scrolling on smaller devices */
+
 /* small and medium phones: use vertical layout */
 @media screen and (max-width: 720px) {
 	
-	header.masterHeader {
+	.masterHeader {
 		padding: 10px 20px 0;
 		margin-right: 0;
 		margin-top: 0;
@@ -445,4 +282,184 @@ requiring horizontal scrolling on smaller devices */
 	.masterHeader, footer {
 		display: none;
 	}
+}
+/***************** Headers *****************************/
+h1, h2, h3, h4, h5, h6 {
+	color: #232323;
+	margin: 24px 0 10px;
+}
+h1, h2, h3 {
+	font-family: Arvo, Monaco, serif;
+	line-height: 1.3;
+	font-weight: normal;
+}
+h1, h2, h3 {
+	display: block;
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 5px;
+}
+h1 {
+	font-size: 24px;
+}
+h2 {
+	font-size: 18px;
+}
+h3 {
+	font-size: 16px;
+}
+h4, h5, h6 {
+	font-family: Arvo, Monaco, serif;
+	font-weight: 700;
+	font-size:14px;
+}
+/*********** Text Elements **************/
+p, ul, ol, table, dl {
+	margin: 0 0 14px;
+}
+a {
+	color: #000099;
+	font-weight: 200;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a > small {
+	font-size: 12px;
+}
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: 700;
+}
+ul > li {
+	list-style: inside;
+	padding-left: 25px;
+}
+li {
+	list-style: decimal inside;
+	padding-left: 20px;
+}
+blockquote {
+	margin: 0;
+	padding: 0 0 0 20px;
+	font-style: italic;
+}
+hr {
+	border: 0;
+	background: #ccc;
+	height: 1px;
+	margin: 0 0 24px;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+.quote {
+	font-style: italic;
+}
+
+/******************* Images ******************/
+img {
+	position: relative;
+	margin: 0 auto;
+	width: auto;
+	height: auto;
+	max-width: 650px;
+	padding: 5px;
+	margin: 10px 0 0px 0;
+	border: 1px solid #ccc;
+}
+/* TODO revise this */
+img + figcaption {
+	margin: 0 0 32px 0;
+	font-style:italic;
+}
+
+/*********** Code blocks ************************/
+/* TODO revise class names, hierarchy, purpose */
+code, pre {
+	font-family: Monaco, Terminal, monospace;
+	color: #000;
+	font-size: 14px;
+	word-break: break-all;
+	/* IE hack to 'gain layout' and apply word-break */
+	float: left;
+}
+pre {
+	padding: 4px 12px;
+	background: #FDFEFB;
+	border-radius: 4px;
+	border: 1px solid #D7D8C8;
+	overflow: auto;
+	overflow-y: hidden;
+	margin-bottom: 32px;
+}
+.minified {
+	font-size: 12px;
+	word-break: break-all;
+}
+/* psuedo code */
+.pseudoDeclaration {
+	font-weight: bold;
+}
+.pseudoCodeIndent1 {
+	padding-left: 2em;
+}
+.var {
+	font-style: italic;
+	font-weight: bold;
+}
+.function {
+	font-weight: bold;
+	font-style: normal;
+}
+
+/***************** Tables *********************/
+table {
+	width: 100%;
+	border: 1px solid #CCCCCC;
+	margin-bottom: 32px;
+	text-align: left;
+}
+table > caption {
+	font-style:italic;
+}
+th {
+	font-family: 'Arvo', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+/* Data Tables */
+.dataTable th {
+	font-size: 14px;
+	padding: 5px;
+	background: #F0F0F0;
+}
+.dataTable td {
+	padding: 5px;
+	background: #EDEDED;
+}
+.dataTable tbody {
+	border: 1px solid #FF0000;
+}
+
+/* Big Loud Tables */
+.bigTable th {
+	font-size: 16px;
+	padding: 10px;
+	background: #232323;
+	color: #FDFEFB;
+}
+.bigTable td {
+	padding: 10px;
+	background: #ccc;
+}
+
+/******* banner to inform IE users to upgrade ***********/
+.chromeframe {
+	margin: 0.2em 0;
+	background: #CCCCCC;
+	color: #000000;
+	padding: 0.2em 0;
 }
