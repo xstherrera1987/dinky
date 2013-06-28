@@ -1,4 +1,6 @@
 <?php
+// TODO i18n
+define("DEBUG", TRUE);
 define("THEME", get_template_directory_uri() );
 define("STYLESHEET", get_stylesheet_directory_uri() );
 
@@ -7,9 +9,10 @@ add_action( 'after_setup_theme', 'dinky_setup' );
 add_action( 'init', 'register_resources' );
 
 function dinky_setup() {
-	register_nav_menu( 'headerNav', __( 'Header Navigation Menu', 'dinky' ) );
+	// register the main nav
+	register_nav_menu( 'headerNav', "Header Navigation" );
 	
-	// TODO add theme support !
+	// TODO add theme support
 	add_theme_support("");
 }
 
@@ -39,8 +42,21 @@ function is_code_post() {
 	return TRUE;
 }
 
+// TODO implement
 function dinky_content_nav() {
 	
 }
 
+function debug_styles() {
+	?>
+		<style>
+		.log {
+			display: block;
+			border: #000000 1px solid;
+			background: #FFFFFF;
+			color: #FF0000;
+		}
+		</style>	
+	<?php 
+}
 ?>

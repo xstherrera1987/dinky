@@ -10,6 +10,7 @@
 + + then if so, load google-code-prettifier JS, etc...
 + include a screenshot.png in distributable *(when complete)*
 + design a 404 page (targetHtml)
++ design search input bar (place / style)
 
 ### Medium Priority:
 
