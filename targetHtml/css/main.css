@@ -180,6 +180,8 @@ footer > p.tiny {
 }
 
 /************************* Media Queries ******************************/
+
+/* TODO find optimal footer cut-off height for all navigation button counts */
  
 /* regular width, but really short window: fix footer overlapping header */
 @media screen and (max-height: 480px) and (min-width: 960px) {
@@ -188,14 +190,12 @@ footer > p.tiny {
 		display: none;
 	}
 }
-/* TODO find optimal footer cut-off height for all navigation button counts */
 @media screen and (max-height: 390px) and (min-width: 960px) {
 
 	footer.threeNavButtons {
 		display: none;
 	}
 }
-
 
 /* classic computer screen size (1024x768) and old iphones: */
 /* header at the top, footer at the bottom, content in between */
@@ -216,12 +216,6 @@ footer > p.tiny {
 		padding-right: 320px;
 		margin-top: 0;
 	}
-
-	.masterHeader > ul {
-		position: absolute;
-		right: 130px;
-		top: 44px;
-	}
 	
 	/* TODO determine optimal minimum height for .masterHeader for other button counts */
 	.masterHeader.threeNavButtons {
@@ -241,13 +235,19 @@ footer > p.tiny {
 		margin: 0 84px 0 50px;
 		padding: 0;
 	}
+	
+	.masterHeader > nav > ul {
+		position: absolute;
+		right: 130px;
+		top: 44px;
+	}
 }
 
 /* TODO images at 650px stretch the page out to 650 px 
 requiring horizontal scrolling on smaller devices */
 
 /* small and medium phones: use vertical layout */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 550px) {
 	
 	.masterHeader {
 		padding: 10px 20px 0;
@@ -260,14 +260,16 @@ requiring horizontal scrolling on smaller devices */
 		margin: 0 0 30px;
 	}
 
+	.masterHeader > nav > ul {
+		position: static;
+	}
+
 	footer {
 		margin: 0 0 0 30px;
 	}
-
-	header.masterHeader ul, header.masterHeader p.view {
-		position: static;
-	}
 }
+/* nav buttons under page title for thinnest screens */
+
 
 /* for PrintPreview and actual paper prints */
 @media print {
