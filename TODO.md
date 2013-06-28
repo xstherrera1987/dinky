@@ -1,13 +1,18 @@
 ### Top Priority:
++ blog name should **not** be the author name
++ + need a new shorter blog name
 + Implement all basic functionality needed to use this theme for my blog
 + + Then *(low priority)* cut a branch for version 2.
 
 
 ### High Priority:
 + determine a way to allow blogger to tag a post as containing code
-then if so, load google-code-prettifier JS, etc...
++ + then if so, load google-code-prettifier JS, etc...
 + include a screenshot.png in distributable *(when complete)*
 + design a 404 page (targetHtml)
+
+### Medium Priority:
+
 
 ### Low Priority:
 + adopt / devise framebusting strategy

@@ -1,3 +1,8 @@
+Dinky Wordpress Theme
+---------------------
+
+### *Theme Usage Notes:*
+
 ### Code Prettifier
 
 For blog posts / pages with source code use
