@@ -8,6 +8,11 @@ define("STYLESHEET", get_stylesheet_directory_uri() );
 add_action( 'after_setup_theme', 'dinky_setup' );
 add_action( 'init', 'register_resources' );
 
+/**
+ * register the nav menu and perform other setup
+ *
+ * @return void
+ */
 function dinky_setup() {
 	// register the main nav
 	register_nav_menu( 'headerNav', "Header Navigation" );
@@ -16,7 +21,14 @@ function dinky_setup() {
 	add_theme_support("");
 }
 
+/**
+ * register scripts and styles, perform other setup
+ *
+ * @param string $description A text with a maximum of 80 characters.
+ * @return void
+ */
 function register_resources() {
+	// TOOD deregister, remove other useless things
 	remove_action('wp_head', 'wp_generator');
 	
 	define("JS_DIR", THEME."/js" );
@@ -31,11 +43,23 @@ function register_resources() {
 
 // TODO (low-priority) get the class name from Options/DB instead of hardcoding
 add_filter('wp_nav_menu','add_header_nav_class');
+/**
+ * adds .navButton to <a> in the nav menu.
+ *
+ * @param string $menuHtml The filter hook text: the entire navigation menu.
+ * @return string the modified menu
+ */
 function add_header_nav_class($menuHtml) {
 	$class = "navButton";
 	return preg_replace('/<a /', '<a class="'.$class.'" ', $menuHtml);
 }
 
+
+/**
+ * render true if the current post includes source code which needs to be prettified.
+ *
+ * @return void
+ */
 function is_code_post() {
 	// return true if this is a blog post with code
 	// subsequently, we load the code prettifier JS / CSS
@@ -43,10 +67,16 @@ function is_code_post() {
 }
 
 // TODO implement
+// params will be: nav-above, nav-below
 function dinky_content_nav() {
 	
 }
 
+/**
+ * render CSS debug rules.
+ *
+ * @return void
+ */
 function debug_styles() {
 	?>
 		<style>

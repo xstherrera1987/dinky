@@ -31,10 +31,9 @@
 		<div class="wrapper">
 			<?php /* TODO set navButton class from site-admin */ ?>
 			<header class="masterHeader fiveNavButtons">
-				<h1><?php bloginfo( 'title' ); ?></h1>
+				<h1><?php wp_title(''); ?></h1>
 				<h2><?php bloginfo( 'description' ); ?></h2>
-				<nav role="navigation">
-
+				<nav>
 				<?php wp_nav_menu( 
 					array( 
 							'theme_location' => 'headerNav',
