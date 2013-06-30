@@ -1,19 +1,18 @@
 ### Top Priority:
-+ blog name should **not** be the author name
-+ + need a new shorter blog name
 + Implement all basic functionality needed to use this theme for my blog
-+ + Then *(low priority)* 
++ + Then *(low priority)*
 
 
 ### High Priority:
-+ determine a way to allow blogger to tag a post as containing code
-+ + then if so, load google-code-prettifier JS, etc...
-+ include a screenshot.png in distributable *(when complete)*
 + design a 404 page (targetHtml)
 + design search input bar (place / style)
++ fix footer
++ + does not appear on first page load only on window-resize.
++ + appears in center instead of aligned to the left margin
 
 ### Medium Priority:
-
++ determine a way to allow blogger to tag a post as containing code
++ + then if so, load google-code-prettifier JS, etc...
 
 ### Low Priority:
 + adopt / devise framebusting strategy
@@ -22,10 +21,11 @@
 + investigate / research:
 + + Pingback Url
 + + Microformats
-+ + + http://gmpg.org/xfn/11"
++ + + http://gmpg.org/xfn/11
 + + + other?
 
 ### Future:
++ include a screenshot.png in distributable *(when complete)*
 + cut a branch for version 2:
 + + configurable quantity of nav buttons
 + + easily configurable color scheme (WP inputs for the 2 or 3 colors actually used)
