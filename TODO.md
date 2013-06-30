@@ -13,6 +13,7 @@
 ### Medium Priority:
 + determine a way to allow blogger to tag a post as containing code
 + + then if so, load google-code-prettifier JS, etc...
++ design CLI output style
 
 ### Low Priority:
 + adopt / devise framebusting strategy

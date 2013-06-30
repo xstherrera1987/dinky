@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
-		<title><?php is_home() ? bloginfo( 'description' ) : wp_title(''); ?></title>
+		<title><?php is_home() ? bloginfo( 'name' ) : wp_title(''); ?></title>
 		<?php /* TODO research SEO for how to populate this */ ?>
 		<meta name="description" content="CompSci & SoftwareEng Blog - Joe Herrera">
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -19,6 +19,7 @@
 				wp_enqueue_script( "css3-mediaqueries");
 			?>
 		<![endif]-->
+		<!-- TODO these resources will have to be loaded by later after post tags are determined -->
 		<?php if ( is_code_post() ) {
 			wp_enqueue_script( "google-code-prettify-js");
 			wp_enqueue_style("google-code-prettify-css");
@@ -31,7 +32,7 @@
 		<div class="wrapper">
 			<?php /* TODO set navButton class from site-admin */ ?>
 			<header class="masterHeader fiveNavButtons">
-				<h1><?php wp_title(''); ?></h1>
+				<h1><?php bloginfo( 'name' ); ?></h1>
 				<h2><?php bloginfo( 'description' ); ?></h2>
 				<nav>
 				<?php wp_nav_menu( 

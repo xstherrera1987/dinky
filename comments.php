@@ -1,7 +1,6 @@
 	<div id="comments">
-	<p class="log">comments.php rendering</p>
 	<?php if ( post_password_required() ) : ?>
-		<p class="nopassword">'This post is password protected. Enter the password to view any comments.'</p>
+		<p class="noPassword">'This post is password protected. Enter the password to view any comments.'</p>
 	</div>
 	<?php
 			return;
@@ -9,15 +8,9 @@
 	?>
 
 	<?php if ( have_comments() ) : ?>
-		<h3 id="comments-title">Comments</h3>
+		<h3 id="commentsTitle">Comments</h3>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' )): ?>
-		<nav id="comment-nav-above">
-			<div class="nav-previous">Older Comments</div>
-			<div class="nav-next">Newer Comments &rarr;</div>
-		</nav>
-		<?php endif; ?>
-
+		<!-- TODO comments pagination -->
 		<ol class="commentlist">
 			<?php
 				wp_list_comments( array( 'callback' => 'dinky_comment' ) );
@@ -28,4 +21,4 @@
 
 	<?php comment_form(); ?>
 
-</div>
+	</div>
