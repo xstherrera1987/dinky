@@ -9,11 +9,12 @@
 + fix footer
 + + does not appear on first page load only on window-resize.
 + + appears in center instead of aligned to the left margin
++ implement Theme Options page
 
 ### Medium Priority:
 + determine a way to allow blogger to tag a post as containing code
 + + then if so, load google-code-prettifier JS, etc...
-+ design CLI output style
++ design CLI output style	
 
 ### Low Priority:
 + adopt / devise framebusting strategy

@@ -1,10 +1,6 @@
 <?php get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 
-		<!-- TODO get previous posts by ajax -->
-		<!-- TODO design a fallback incase there is no JS -->
-		<?php dinky_content_nav( 'nav-above' ); ?>
-		
 		<?php $mainLoop = new WP_Query( array( 'orderby' => 'date') );
 		while($mainLoop->have_posts()) : $mainLoop->the_post(); ?>
 			
@@ -15,10 +11,6 @@
 		
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
-		
-		<?php dinky_content_nav( 'nav-below' ); ?>
-		<!-- TODO get next posts by ajax -->
-		<!-- TODO design a fallback incase there is no JS -->
 		
 	<?php else : ?>
 		

@@ -5,9 +5,12 @@ define("THEME", get_template_directory_uri() );
 define("STYLESHEET", get_stylesheet_directory_uri() );
 
 // run dinky_setup() when 'after_setup_theme' hook is fired
+// TODO order these chronologically (order in which WP will execute them)
 add_action( 'after_setup_theme', 'dinky_setup' );
-add_action( 'init', 'register_resources' );
+add_action( 'init', 'dinky_register_resources' );
 add_action( 'widgets_init', 'dinky_widget_init' );
+add_action( 'admin_init', 'dinky_theme_options_init' );
+add_action( 'admin_menu', 'dinky_add_theme_options_page' );
 
 /**
  * register the nav menu and perform other setup
@@ -27,7 +30,7 @@ function dinky_setup() {
  *
  * @return void
  */
-function register_resources() {
+function dinky_register_resources() {
 	// TOOD deregister, remove other useless things
 	remove_action('wp_head', 'wp_generator');
 	
@@ -66,12 +69,6 @@ function is_code_post() {
 	return TRUE;
 }
 
-// TODO implement
-// params will be: nav-above, nav-below
-function dinky_content_nav() {
-	
-}
-
 function dinky_comment( $comment, $args, $depth ) {
 	$comment_type = $comment->comment_type;
 	if ('pingback' == $comment_type || 'trackback' == $comment_type): ?>
@@ -98,7 +95,7 @@ function dinky_comment( $comment, $args, $depth ) {
  *
  * @return void
  */
-function debug_styles() { ?>
+function debug_styles_render() { ?>
 	<style>
 		.log {
 			display: block;
@@ -119,6 +116,45 @@ function dinky_widget_init() {
 		'before_widget' => '',
 		'after_widget' => '',
 	) );
+}
+
+/******************************* Theme Options ********************************/
+function dinky_theme_options_init() {
+	register_setting( 'dinky_options_group', 'test_setting' );
+	add_settings_section( 'test_section', 'Test Section', 'test_section_render', 'dinky_options_group' );
+	add_settings_field( 'test_field', 'Test Field', 'test_field_render', 'dinky_options_group', 'test_section' );
+	
+	if (TRUE == DEBUG) { debug_styles_render(); }
+}
+function dinky_add_theme_options_page(){
+	add_theme_page( 'Theme Options', 'Theme Options', 'edit_theme_options', 'dinky_options', 'dinky_options_page_render');
+}
+function dinky_options_page_render() {
+	?>
+		<p class="log">dinky_options_page_render() in functions.php</p>
+		<div class="wrap">
+		<?php screen_icon(); ?>
+		<h2>Dinky Theme Options</h2>
+		<?php settings_errors(); ?>
+
+		<form method="post" action="options.php">
+			<?php
+				?><p class="log">settings_fields()<?php
+				settings_fields( 'dinky_options_group' );
+				
+				?><p class="log">do_settings_sections()</p><?php
+				do_settings_sections( 'theme_options' );
+				submit_button();
+			?>
+		</form>
+	</div>
+	<?php 
+}
+function test_section_render() {
+	?><p class="log">section one render()</p><?php 
+}
+function test_field_render() {
+	?><p class="log">field one render()</p><?php
 }
 
 ?>

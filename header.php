@@ -25,7 +25,7 @@
 			wp_enqueue_style("google-code-prettify-css");
 		}?>
 		
-		<?php if (TRUE == DEBUG) { debug_styles(); } ?>
+		<?php if (TRUE == DEBUG) { debug_styles_render(); } ?>
 		<?php wp_head(); ?>
 	</head>
 	<body>
