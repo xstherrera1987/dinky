@@ -7,6 +7,7 @@ define("STYLESHEET", get_stylesheet_directory_uri() );
 // run dinky_setup() when 'after_setup_theme' hook is fired
 add_action( 'after_setup_theme', 'dinky_setup' );
 add_action( 'init', 'register_resources' );
+add_action( 'widgets_init', 'dinky_widget_init' );
 
 /**
  * register the nav menu and perform other setup
@@ -24,7 +25,6 @@ function dinky_setup() {
 /**
  * register scripts and styles, perform other setup
  *
- * @param string $description A text with a maximum of 80 characters.
  * @return void
  */
 function register_resources() {
@@ -72,21 +72,53 @@ function dinky_content_nav() {
 	
 }
 
+function dinky_comment( $comment, $args, $depth ) {
+	$comment_type = $comment->comment_type; 
+	if ('pingback' == $comment_type || 'trackback' == $comment_type): ?>
+
+		<li class="post pingback">
+			<p>Pingback: <?php comment_author_link(); ?><?php edit_comment_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p>
+	<?php
+	else: ?>
+		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+			<article id="comment-<?php comment_ID(); ?>" class="comment">
+	
+				<div class="comment-content"><?php comment_text(); ?></div>
+	
+				<div class="reply">
+					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'twentyeleven' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				</div>
+			</article>
+	<?php
+	endif;
+}
+
 /**
  * render CSS debug rules.
  *
  * @return void
  */
-function debug_styles() {
-	?>
-		<style>
+function debug_styles() { ?>
+	<style>
 		.log {
 			display: block;
 			border: #000000 1px solid;
 			background: #FFFFFF;
 			color: #FF0000;
 		}
-		</style>	
-	<?php 
+	</style>	
+<?php 
 }
+
+function dinky_widget_init() {
+		register_sidebar( array(
+		'name' => 'Footer Widget (no title)',
+		'id' => 'footer_widget',
+		'description' => 'Shown starting from the bottom on the left-hand side.'.
+						' The title cannot be removed from markup, and it is hidden with CSS.',
+		'before_widget' => '',
+		'after_widget' => '',
+	) );
+}
+
 ?>

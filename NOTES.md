@@ -14,3 +14,6 @@ to enable google-code-prettify syntax highlighting.  Proper formatting with <cod
 eg:
 
     &nbsp;&nbsp;var indented = ...;
+
+### Image Size
+Use Media Settings to set maximum image size to 650px. This limit is enforced by the theme in order to maintain structure.  Larger images will be resized, resulting in poor page load performance.

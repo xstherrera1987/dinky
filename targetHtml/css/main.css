@@ -64,7 +64,9 @@ body {
 	margin: 30px 25px 0 0;
 	-webkit-font-smoothing: antialiased;
 }
-.masterHeader h1, .masterHeader h2, .masterHeader a {
+.masterHeader h1, 
+.masterHeader h2, 
+.masterHeader a {
 	color: #FFFFFF;
 }
 .masterHeader h2 {
@@ -82,7 +84,7 @@ body {
 }
 
 /* Master Header: the black heading with nav buttons and site title */
-.masterHeader > ul {
+.masterHeader ul {
 	list-style: none;
 	padding: 0;
 }
@@ -169,12 +171,16 @@ footer {
 	bottom: 10px;
 	padding-left: 50px;
 }
-footer > p {
+footer p {
 	font-size: 8pt;
 	margin: 0;
 }
-footer > p.tiny {
+footer p.tiny {
 	font-size: 6pt;
+}
+
+.widgettitle {
+	display: none;
 }
 
 /************************* Media Queries ******************************/
@@ -204,7 +210,9 @@ footer > p.tiny {
 		margin: 0;
 	}
 
-	.masterHeader, #main, footer {
+	.masterHeader, 
+	#main, 
+	footer {
 		float: none;
 		position: static;
 		width: auto;

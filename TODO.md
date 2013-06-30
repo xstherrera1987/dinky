@@ -2,7 +2,7 @@
 + blog name should **not** be the author name
 + + need a new shorter blog name
 + Implement all basic functionality needed to use this theme for my blog
-+ + Then *(low priority)* cut a branch for version 2.
++ + Then *(low priority)* 
 
 
 ### High Priority:
@@ -26,6 +26,6 @@
 + + + other?
 
 ### Future:
-+ version 2 goals:
++ cut a branch for version 2:
 + + configurable quantity of nav buttons
 + + easily configurable color scheme (WP inputs for the 2 or 3 colors actually used)
