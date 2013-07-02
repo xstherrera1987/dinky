@@ -1,22 +1,7 @@
 Dinky Wordpress Theme
 ---------------------
+###General Notes for Developers / Designers
 
-### *Theme Usage Notes:*
-
-### Code Prettifier
-
-For blog posts / pages with source code use
-
-    <code class="prettyprint">
-
-to enable google-code-prettify syntax highlighting.  Proper formatting with <code> < br /> </code> is still necessary and it is probably best to use 2 spaces per indent level.
-
-eg:
-
-    &nbsp;&nbsp;var indented = ...;
-
-### Image Size
-Use Media Settings to set maximum image size to 650px. This limit is enforced by the theme in order to maintain structure.  Larger images will be resized, resulting in poor page load performance.
-
-### 404 Page
-There is a widget area for the 404 page named "404 Text Widget". This can be used to display a custom message to users by adding a text widget onto this widget-area.
+####warning
++ Eclipse's .buildpath has a hardcoded link to wp-includes for auto-complete
++ There are still a few issues across the browsers with Webkit browsers being the best-tested and best-supported.
