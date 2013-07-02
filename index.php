@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+	<div class="mainSearch">
+		<?php get_search_form(); ?>
+	</div>
 	<?php if ( have_posts() ) : ?>
 
 		<?php $mainLoop = new WP_Query( array( 'orderby' => 'date') );

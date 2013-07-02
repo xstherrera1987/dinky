@@ -4,11 +4,12 @@
 
 
 ### High Priority:
-+ design a 404 page (targetHtml)
-+ design search input bar (place / style)
++ add href to blog title at: 
++ + .masterHeader h1 
 + fix footer
 + + does not appear on first page load only on window-resize.
 + + appears in center instead of aligned to the left margin
++ fix search input position on <= 550px-width display
 + implement Theme Options page
 
 ### Medium Priority:

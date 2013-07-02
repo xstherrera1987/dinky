@@ -9,6 +9,7 @@ define("STYLESHEET", get_stylesheet_directory_uri() );
 add_action( 'after_setup_theme', 'dinky_setup' );
 add_action( 'init', 'dinky_register_resources' );
 add_action( 'widgets_init', 'dinky_widget_init' );
+
 add_action( 'admin_init', 'dinky_theme_options_init' );
 add_action( 'admin_menu', 'dinky_add_theme_options_page' );
 
@@ -107,17 +108,55 @@ function debug_styles_render() { ?>
 <?php 
 }
 
+/**
+ * register sidebars
+ *
+ * @return void
+ */
 function dinky_widget_init() {
-		register_sidebar( array(
+	register_sidebar( array(
 		'name' => 'Footer Widget (no title)',
 		'id' => 'footer_widget',
 		'description' => 'Shown starting from the bottom on the left-hand side.'.
 						' The title cannot be removed from markup, and it is hidden with CSS.',
 		'before_widget' => '',
 		'after_widget' => '',
-	) );
+	));
+	register_sidebar( array(
+		'name' => '404 Top Widget',
+		'id' => '404_top_widget',
+		'description' => 'Shown on 404 page at the top (there are 3).',
+		'before_widget' => '',
+		'after_widget' => '',
+	));
+	register_sidebar( array(
+		'name' => '404 Middle Widget',
+		'id' => '404_middle_widget',
+		'description' => 'Shown on 404 page in the middle (there are 3).',
+		'before_widget' => '',
+		'after_widget' => '',
+	));
+	register_sidebar( array(
+		'name' => '404 Bottom Widget',
+		'id' => '404_bottom_widget',
+		'description' => 'Shown on 404 page at the bottom (there are 3).',
+		'before_widget' => '',
+		'after_widget' => '',
+	));
 }
 
+/**
+ * notify users of ineffective widget titles on widgets.php
+ *
+ * @return void
+ */
+function widgets_notice() {
+	if ('widgets.php' == $GLOBALS['pagenow']) { ?>
+		<div class="updated">
+			<p>Note: All Dinky Theme widget titles are hidden by CSS but still appear in generated markup.</p>
+		</div>
+	<?php }
+}
 /******************************* Theme Options ********************************/
 function dinky_theme_options_init() {
 	register_setting( 'dinky_options_group', 'test_setting' );
@@ -155,6 +194,16 @@ function test_section_render() {
 }
 function test_field_render() {
 	?><p class="log">field one render()</p><?php
+}
+
+
+add_action('admin_notices', 'widgets_notice');
+
+if (true == DEBUG) add_action( 'admin_notices', 'dashboard_pagecheck' );
+function dashboard_pagecheck() {
+	if( !is_admin() ) return;
+	global $pagenow;
+	echo '<p class="error">'.$pagenow.'</p>';
 }
 
 ?>
