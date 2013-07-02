@@ -207,7 +207,7 @@ footer p.tiny {
 /* classic computer screen size (1024x768) and old iphones: */
 /* header at the top, footer at the bottom, content in between */
 @media screen and (max-width: 960px) {
-
+	
 	.wrapper {
 		width: auto;
 		margin: 0;
@@ -252,14 +252,18 @@ footer p.tiny {
 	}
 }
 
-/* small and medium phones: use vertical layout */
-@media screen and (max-width: 550px) {
-	
+@media screen and (max-width: 720px) {
+
 	/* TODO not working in Firefox, IE, Android */
 	.mainSearch .searchinput {
 		width: 99%;
-		float: none;
+		float: left;
+		display: block;
 	}
+}
+
+/* small and medium phones: use vertical layout */
+@media screen and (max-width: 550px) {
 	
 	.masterHeader {
 		padding: 10px 20px 0;
@@ -383,6 +387,9 @@ sub {
 	width: 61%;
 	margin: 10px 0 10px;	
 	font-weight: normal;
+	border-radius: 3px;
+	height:15px;
+	padding: 4px 4px 4px 5px;
 }
 
 .mainSearch .searchinput {
