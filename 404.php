@@ -1,7 +1,9 @@
 <?php
 get_header(); ?>
-			<?php dynamic_sidebar( '404_top_widget' ); ?>
-			<?php dynamic_sidebar( '404_middle_widget' ); ?>
-			<?php dynamic_sidebar( '404_bottom_widget' ); ?>
+	<div class="mainSearch">
+		<?php get_search_form(); ?>
+	</div>
+	<h1>404 Page Not Found</h1>
+	<?php dynamic_sidebar( '404_text_widget' ); ?>
 	</div><!-- #main -->
 <?php get_footer(); ?>

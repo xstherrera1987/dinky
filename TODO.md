@@ -5,7 +5,8 @@
 
 ### High Priority:
 + add href to blog title at: 
-+ + .masterHeader h1 
++ + .masterHeader h1
++ implement page.php
 + fix footer
 + + does not appear on first page load only on window-resize.
 + + appears in center instead of aligned to the left margin
@@ -16,6 +17,8 @@
 + determine a way to allow blogger to tag a post as containing code
 + + then if so, load google-code-prettifier JS, etc...
 + design CLI output style	
++ search input colors seem wrong
++ + when active change gray to black/transparent?
 
 ### Low Priority:
 + adopt / devise framebusting strategy

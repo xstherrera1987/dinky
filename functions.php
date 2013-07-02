@@ -123,23 +123,9 @@ function dinky_widget_init() {
 		'after_widget' => '',
 	));
 	register_sidebar( array(
-		'name' => '404 Top Widget',
-		'id' => '404_top_widget',
-		'description' => 'Shown on 404 page at the top (there are 3).',
-		'before_widget' => '',
-		'after_widget' => '',
-	));
-	register_sidebar( array(
-		'name' => '404 Middle Widget',
-		'id' => '404_middle_widget',
-		'description' => 'Shown on 404 page in the middle (there are 3).',
-		'before_widget' => '',
-		'after_widget' => '',
-	));
-	register_sidebar( array(
-		'name' => '404 Bottom Widget',
-		'id' => '404_bottom_widget',
-		'description' => 'Shown on 404 page at the bottom (there are 3).',
+		'name' => '404 Text Widget',
+		'id' => '404_text_widget',
+		'description' => 'Shown on 404 page underneath the header and search form.',
 		'before_widget' => '',
 		'after_widget' => '',
 	));
