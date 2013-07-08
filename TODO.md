@@ -19,6 +19,8 @@
 + design CLI output style	
 + search input colors seem wrong
 + + when active change gray to black/transparent?
++ convert all font sizes to **em**
++ + NOTE: consider the default font size of major browsers beforehand	
 
 ### Low Priority:
 + adopt / devise framebusting strategy
