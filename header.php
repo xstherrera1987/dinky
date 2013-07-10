@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<title><?php is_home() ? bloginfo( 'name' ) : wp_title(''); ?></title>
-<?php /* TODO research SEO for how to write this effectively */ ?>
-<meta name="description"
-	content="CompSci & SoftwareEng Blog - Joe Herrera">
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<?php /* TODO are these two necessary */ ?>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
+
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<title><?php is_home() ? bloginfo( 'name' ) : wp_title(''); ?></title>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
+<?php $options = get_option( 'dinky_theme_options' ); ?>
+<meta name="description" content="<?php echo $options['meta_description']; ?>">
+<meta name="keywords" content="<?php echo $options['meta_keywords']; ?>">
+<meta name="language" content="<?php echo get_bloginfo('language'); ?>">
+
 <?php wp_enqueue_style("main"); ?>
 
 <!--[if lte IE 9]>

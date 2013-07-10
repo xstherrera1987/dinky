@@ -10,7 +10,7 @@ add_action( 'init', 'dinky_register_resources' );
 add_action( 'widgets_init', 'dinky_widget_init' );
 
 // Theme Options setup
-if ( is_user_logged_in() )
+if ( is_admin() )
 	require_once ( get_template_directory() . '/theme-options.php' );
 
 /**

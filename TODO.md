@@ -21,7 +21,8 @@
 + search input colors seem wrong
 + + when active change gray to black/transparent?
 + convert all font sizes to **em**
-+ + NOTE: consider the default font size of major browsers beforehand	
++ + NOTE: consider the default font size of major browsers beforehand
++ set Meta Description on a per-page, or per-post basis	
 
 ### Low Priority:
 + adopt / devise framebusting strategy
