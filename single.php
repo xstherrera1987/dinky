@@ -1,22 +1,24 @@
 <?php get_header(); ?>
-		<article>
+	<div class="mainSearch">
+		<?php get_search_form(); ?>
+	</div>
+	
+	<article>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+		<!-- TODO make this a button -->
+		<span class="nav-previous"><?php previous_post_link( '%link', 'Previous'); ?></span>
 		
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	
-			<!-- TODO make this a button -->
-			<span class="nav-previous"><?php previous_post_link( '%link', 'Previous'); ?></span>
+		<h1><?php the_title() ?></h1>
+		<?php the_content(); ?>
 			
-			<h1><?php the_title() ?></h1>
-			<?php the_content(); ?>
-				
-			<!-- TODO make this a button -->
-			<span class="nav-next"><?php next_post_link( '%link', 'Next'); ?></span>
-	
-		<?php endwhile; endif; ?>
-			
-		</article>
+		<!-- TODO make this a button -->
+		<span class="nav-next"><?php next_post_link( '%link', 'Next'); ?></span>
+
+	<?php endwhile; endif; ?>	
+	</article>
 		
-		<?php comments_template( '', true ); ?>
+	<?php comments_template( '', true ); ?>
 	
-	</div><!-- #main -->
+</div><!-- #main -->
 <?php get_footer(); ?>

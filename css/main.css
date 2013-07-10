@@ -182,121 +182,6 @@ footer aside ul > li > a {
 	color: #000099;
 }
 
-/************************* Media Queries ******************************/
-
-/* TODO find optimal footer cut-off height for all navigation button counts */
- 
-/* regular width, but really short window: fix footer overlapping header */
-@media screen and (max-height: 480px) and (min-width: 960px) {
-	
-	footer.fiveNavButtons {
-		display: none;
-	}
-}
-@media screen and (max-height: 390px) and (min-width: 960px) {
-
-	footer.threeNavButtons {
-		display: none;
-	}
-}
-
-/* classic computer screen size (1024x768) and old iphones: */
-/* header at the top, footer at the bottom, content in between */
-@media screen and (max-width: 960px) {
-	
-	.wrapper {
-		width: auto;
-		margin: 0;
-	}
-
-	.masterHeader, 
-	#main, 
-	footer {
-		float: none;
-		position: static;
-		width: auto;
-	}
-
-	.masterHeader {
-		padding-right: 320px;
-		margin-top: 0;
-	}
-	
-	/* TODO determine optimal minimum height for .masterHeader for other button counts */
-	.masterHeader.threeNavButtons {
-		min-height: 115px;
-	}
-	.masterHeader.fiveNavButtons {
-		min-height: 200px;
-	}
-
-	#main {
-		padding: 20px 84px 20px 50px;
-		margin: 0 0 20px;
-	}
-
-	footer {
-		border-top: 1px solid #ccc;
-		margin: 0 84px 0 50px;
-		padding: 0;
-	}
-	
-	.masterHeader > nav > ul {
-		position: absolute;
-		right: 130px;
-		top: 44px;
-	}
-}
-
-@media screen and (max-width: 720px) {
-
-	/* TODO not working in Firefox, IE, Android */
-	.mainSearch .searchinput {
-		width: 99%;
-		float: left;
-		display: block;
-	}
-}
-
-/* small and medium phones: use vertical layout */
-@media screen and (max-width: 550px) {
-	
-	.masterHeader {
-		padding: 10px 20px 0;
-		margin-right: 0;
-		margin-top: 0;
-	}
-
-	#main {
-		padding: 10px 0 10px 20px;
-		margin: 0 0 30px;
-	}
-
-	.masterHeader > nav > ul {
-		position: static;
-	}
-
-	footer {
-		margin: 0 0 0 30px;
-	}
-}
-/* nav buttons under page title for thinnest screens */
-
-
-/* for PrintPreview and actual paper prints */
-@media print {
-	
-	body {
-		color: #000000 !important;
-		background-color: #FFFFFF !important;
-		border: 0 !important;
-		margin: 0 !important;
-		padding: 0 !important;
-	}
-	.masterHeader, footer {
-		display: none;
-	}
-}
 /***************** Headers *****************************/
 h1, h2, h3, h4, h5, h6 {
 	color: #232323;
@@ -378,7 +263,7 @@ sub {
 	bottom: 10px;
 }
 
-.searchinput {
+.searchInput {
 	font-size: 16px;
 	width: 61%;
 	margin: 10px 0 10px;	
@@ -388,13 +273,13 @@ sub {
 	padding: 4px 4px 4px 5px;
 }
 
-.mainSearch .searchinput {
+.mainSearch .searchInput {
 	width:40%;
 	float: right;
 	margin-top: 25px;
 }
 
-.searchinput:focus {
+.searchInput:focus {
 	background: #FFFFFF;
 	rgb(175, 0, 17)
 	border-color: rgba(175, 0, 17, 0.8);
@@ -519,4 +404,120 @@ th {
 	background: #CCCCCC;
 	color: #000000;
 	padding: 0.2em 0;
+}
+
+/************************* Media Queries ******************************/
+
+/* TODO find optimal footer cut-off height for all navigation button counts */
+ 
+/* regular width, but really short window: fix footer overlapping header */
+@media screen and (max-height: 480px) and (min-width: 960px) {
+	
+	footer.fiveNavButtons {
+		display: none;
+	}
+}
+@media screen and (max-height: 390px) and (min-width: 960px) {
+
+	footer.threeNavButtons {
+		display: none;
+	}
+}
+
+/* classic computer screen size (1024x768) and old iphones: */
+/* header at the top, footer at the bottom, content in between */
+@media screen and (max-width: 960px) {
+	
+	.wrapper {
+		width: auto;
+		margin: 0;
+	}
+
+	.masterHeader, 
+	#main, 
+	footer {
+		float: none;
+		position: static;
+		width: auto;
+	}
+
+	.masterHeader {
+		padding-right: 320px;
+		margin-top: 0;
+	}
+	
+	/* TODO determine optimal minimum height for .masterHeader for other button counts */
+	.masterHeader.threeNavButtons {
+		min-height: 115px;
+	}
+	.masterHeader.fiveNavButtons {
+		min-height: 200px;
+	}
+
+	#main {
+		padding: 20px 84px 20px 50px;
+		margin: 0 0 20px;
+	}
+
+	footer {
+		border-top: 1px solid #ccc;
+		margin: 0 84px 0 50px;
+		padding: 0;
+	}
+	
+	.masterHeader > nav > ul {
+		position: absolute;
+		right: 130px;
+		top: 44px;
+	}
+}
+
+@media screen and (max-width: 720px) {
+
+	/* TODO not working in Firefox, IE, Android */
+	.mainSearch .searchInput {
+		width: 96%;
+		float: left;
+		display: block;
+	}
+}
+
+/* small and medium phones: use vertical layout */
+@media screen and (max-width: 550px) {
+	
+	.masterHeader {
+		padding: 10px 20px 0;
+		margin-right: 0;
+		margin-top: 0;
+	}
+
+	#main {
+		padding: 10px 0 10px 20px;
+		margin: 0 0 30px;
+	}
+
+	.masterHeader > nav > ul {
+		position: static;
+	}
+
+	footer {
+		margin: 0 0 0 30px;
+	}
+}
+/* nav buttons under page title for thinnest screens */
+
+
+/* for PrintPreview and actual paper prints */
+@media print {
+	
+	body {
+		color: #000000 !important;
+		background-color: #FFFFFF !important;
+		border: 0 !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.masterHeader, footer {
+		display: none;
+	}
 }
