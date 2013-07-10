@@ -9,7 +9,6 @@ add_action( 'after_setup_theme', 'dinky_setup' );
 add_action( 'init', 'dinky_register_resources' );
 add_action( 'widgets_init', 'dinky_widget_init' );
 
-// Theme Options setup
 if ( is_admin() )
 	require_once ( get_template_directory() . '/theme-options.php' );
 
@@ -35,7 +34,6 @@ function dinky_register_resources() {
 	wp_register_style( "main", CSS_DIR."/main.css", FALSE, NULL, "all");
 }
 
-// TODO (low-priority) get the class name from Options/DB instead of hardcoding
 add_filter('wp_nav_menu','add_header_nav_class');
 /**
  * adds .navButton CSS class to each <a> in the nav menu.
