@@ -186,6 +186,15 @@ footer p.tiny {
 	display: none;
 }
 
+footer aside ul > li {
+	list-style-type: none;
+	
+}
+footer aside ul > li > a {
+	list-style-type: none;
+	color: #000099;	
+}
+
 /************************* Media Queries ******************************/
 
 /* TODO find optimal footer cut-off height for all navigation button counts */
