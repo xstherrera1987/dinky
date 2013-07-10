@@ -99,3 +99,18 @@ function dinky_widget_init() {
 		'after_widget' => '',
 	));
 }
+
+/**
+ * render CSS debug rules.
+ */
+function render_log_styles() { ?>
+	<style>
+		.log {
+			display: block;
+			border: #000000 1px solid;
+			background: #FFFFFF;
+			color: #FF0000;
+		}
+	</style>	
+<?php 
+}

@@ -428,7 +428,7 @@ img + figcaption {
 }
 
 /*********** Code blocks ************************/
-/* TODO revise <code> class names, hierarchy, purpose */
+/* TODO provide minimal code styling, defer to plugin for full styling  */
 code, pre {
 	font-family: Monaco, Terminal, monospace;
 	color: #000;

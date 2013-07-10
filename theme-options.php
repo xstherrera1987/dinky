@@ -2,6 +2,7 @@
 
 add_action( 'admin_init', 'theme_options_init' );
 add_action( 'admin_menu', 'theme_options_add_page' );
+add_action('admin_print_styles', 'render_log_styles');
 
 /**
  * Init plugin options to white list our options
@@ -242,21 +243,8 @@ function widgets_notice() {
 	<?php }
 }
 
-add_action('admin_print_styles', 'debug_styles_render');
-/**
- * render CSS debug rules.
-*/
-function debug_styles_render() { ?>
-	<style>
-		.log {
-			display: block;
-			border: #000000 1px solid;
-			background: #FFFFFF;
-			color: #FF0000;
-		}
-	</style>	
-<?php 
-}
+
+
 
 /* 
 // TODO refactor useful parts out of this commented code
