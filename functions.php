@@ -48,9 +48,12 @@ function add_header_nav_class($menuHtml) {
 	return preg_replace('/<a /', '<a class="'.$class.'" ', $menuHtml);
 }
 
-
 /**
- * render true if the current post includes source code which needs to be prettified.
+ * wp_list_comments callback
+ * 
+ * @param string $comment
+ * @param array $args
+ * @param integer $depth
  */
 function dinky_comment( $comment, $args, $depth ) {
 	$comment_type = $comment->comment_type;
@@ -60,13 +63,14 @@ function dinky_comment( $comment, $args, $depth ) {
 			<p>Pingback: <?php comment_author_link(); ?><?php edit_comment_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 	else: ?>
-		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-			<article id="comment-<?php comment_ID(); ?>" class="comment">
-	
-				<div class="comment-content"><?php comment_text(); ?></div>
+		<li <?php comment_class(); ?> >
+			<article class="comment">
+				<div class="comment-content">
+					<?php comment_text(); ?>
+				</div>
 	
 				<div class="reply">
-					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => 'Reply&darr;', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => 'Reply to Comment&darr;', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 				</div>
 			</article>
 	<?php

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 		<article>
 		
-		<?php if ( have_posts() ) : the_post(); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	
 			<!-- TODO make this a button -->
 			<span class="nav-previous"><?php previous_post_link( '%link', 'Previous'); ?></span>
@@ -12,7 +12,7 @@
 			<!-- TODO make this a button -->
 			<span class="nav-next"><?php next_post_link( '%link', 'Next'); ?></span>
 	
-		<?php endif; ?>
+		<?php endwhile; endif; ?>
 			
 		</article>
 		

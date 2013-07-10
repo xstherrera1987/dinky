@@ -501,6 +501,17 @@ th {
 	padding: 10px;
 	background: #ccc;
 }
+/****** Comments **************/
+.comment-reply-link {
+	font-size:12px;
+}
+.form-allowed-tags > code {
+	font-size:10px;
+}
+
+#cancel-comment-reply-link {
+	font-size:12px; 
+}
 
 /******* banner to inform IE users to upgrade ***********/
 .chromeframe {

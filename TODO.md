@@ -4,8 +4,6 @@
 
 
 ### High Priority:
-+ implement page.php
-+ style comments appearance to match rest of theme
 + fix footer
 + + does not appear on first page load only on window-resize.
 + + appears in center instead of aligned to the left margin
