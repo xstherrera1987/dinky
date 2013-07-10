@@ -17,19 +17,16 @@
 		
 	<?php else : ?>
 		
-		<!-- TODO customize this -->
-		<article class="post noResultsFound">
+		<article>
 			<header class="entry-header">
 				<h1 class="entry-title">Nothing Found</h1>
-			</header><!-- .entry-header -->
+			</header>
 
-			<div class="entry-content">
+			<section>
 				<!-- TODO better message -->
-				<p>No results were found. Try using 'search'.</p>
-				
-				<?php get_search_form(); ?>
-			</div><!-- .entry-content -->
-		</article><!-- #post-0 -->
+				<p>No results were found...</p>
+			</section>
+		</article>
 
 	<?php endif; ?>
 </div><!-- #main -->
