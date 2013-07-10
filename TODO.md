@@ -4,21 +4,15 @@
 
 
 ### High Priority:
-+ add href to blog title at: 
-+ + .masterHeader h1
 + implement page.php
 + fix footer
++ + NOTE: this is no longer reproducible
 + + does not appear on first page load only on window-resize.
 + + appears in center instead of aligned to the left margin
 + fix search input position on <= 550px-width display
-+ implement Theme Options page
-+ remove all Google-Code-Prettify resources and references. This should be implemented as a plugin (and there are plugins that do this already).
++ search input colors seem wrong
 
 ### Medium Priority:
-+ determine a way to allow blogger to tag a post as containing code
-+ + then if so, load google-code-prettifier JS, etc...
-+ design CLI output style	
-+ search input colors seem wrong
 + + when active change gray to black/transparent?
 + convert all font sizes to **em**
 + + NOTE: consider the default font size of major browsers beforehand
@@ -27,12 +21,7 @@
 ### Low Priority:
 + adopt / devise framebusting strategy
 + make IE upgrade banner dismissable (add an X to close)
-+ and set and check for a cookie so we don't further irritate by that message
-+ investigate / research:
-+ + Pingback Url
-+ + Microformats
-+ + + http://gmpg.org/xfn/11
-+ + + other?
++ + and set and check for a cookie so we don't further irritate by that message
 
 ### Future:
 + include a screenshot.png in distributable *(when complete)*

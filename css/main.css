@@ -72,6 +72,9 @@ body {
 .masterHeader a {
 	color: #FFFFFF;
 }
+.masterHeader > h1 > a {
+	text-decoration:none;
+}
 .masterHeader h2 {
 	font-size: 12px;
 	border-bottom: 0;

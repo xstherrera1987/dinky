@@ -21,7 +21,6 @@
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 
-
 <?php if (TRUE == DEBUG) { render_log_styles(); } ?>
 <?php wp_head(); ?>
 </head>
@@ -29,9 +28,7 @@
 	<div class="wrapper">
 		<?php /* TODO set navButton class from site-admin */ ?>
 		<header class="masterHeader fiveNavButtons">
-			<h1>
-				<?php bloginfo( 'name' ); ?>
-			</h1>
+			<h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2>
 				<?php bloginfo( 'description' ); ?>
 			</h2>
