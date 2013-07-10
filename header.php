@@ -15,10 +15,8 @@
 <?php wp_enqueue_style("main"); ?>
 
 <!--[if lte IE 9]>
-	<?php
-		wp_enqueue_script( "html5shiv-printshiv");
-		wp_enqueue_script( "css3-mediaqueries");
-	?>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 
 
