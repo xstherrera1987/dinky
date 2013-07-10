@@ -12,6 +12,7 @@
 + + appears in center instead of aligned to the left margin
 + fix search input position on <= 550px-width display
 + implement Theme Options page
++ remove all Google-Code-Prettify resources and references. This should be implemented as a plugin (and there are plugins that do this already).
 
 ### Medium Priority:
 + determine a way to allow blogger to tag a post as containing code
