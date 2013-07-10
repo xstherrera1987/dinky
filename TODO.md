@@ -5,15 +5,15 @@
 
 ### High Priority:
 + implement page.php
++ style comments appearance to match rest of theme
 + fix footer
 + + NOTE: this is no longer reproducible
 + + does not appear on first page load only on window-resize.
 + + appears in center instead of aligned to the left margin
 + fix search input position on <= 550px-width display
 + search input colors seem wrong
-
-### Medium Priority:
 + + when active change gray to black/transparent?
+### Medium Priority:
 + convert all font sizes to **em**
 + + NOTE: consider the default font size of major browsers beforehand
 + set Meta Description on a per-page, or per-post basis	

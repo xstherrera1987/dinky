@@ -21,7 +21,7 @@ function dinky_setup() {
 	register_nav_menu( 'headerNav', "Header Navigation" );
 	
 	// TODO add theme support
-	add_theme_support("");
+	add_theme_support("menus");
 }
 
 /**
@@ -31,14 +31,8 @@ function dinky_register_resources() {
 	// TOOD deregister, remove other useless things
 	remove_action('wp_head', 'wp_generator');
 	
-	define("JS_DIR", THEME."/js" );
-	wp_register_script( "html5-printshiv", JS_DIR."/html5shiv-printshiv.js", FALSE, NULL, FALSE);
-	wp_register_script( "css3-mediaqueries", JS_DIR."/css3-mediaqueries.js", FALSE, NULL, FALSE);
-	wp_register_script( "google-code-prettify-js", JS_DIR."/google-code-prettify/run_prettify.js", FALSE, NULL, TRUE);
-	
 	define("CSS_DIR", STYLESHEET."/css" );
 	wp_register_style( "main", CSS_DIR."/main.css", FALSE, NULL, "all");
-	wp_register_style( "google-code-prettify-css", CSS_DIR."/prettify.css", FALSE, NULL, "all");
 }
 
 // TODO (low-priority) get the class name from Options/DB instead of hardcoding
