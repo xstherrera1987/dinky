@@ -6,10 +6,16 @@
 	<article>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		<span class="previousPost"><?php previous_post_link( '%link', 'Previous Post'); ?></span>
+		<span class="previousPost"><?php previous_post_link( '%link', '&larr; Older Posts'); ?></span>
+		<span class="divider"> | </span>
+		<span class="nextPost"><?php next_post_link( '%link', 'Newer Posts &rarr;'); ?></span>
+		
 		<h1><?php the_title() ?></h1>
 		<?php the_content(); ?>
-		<span class="nextPost"><?php next_post_link( '%link', 'Next Post'); ?></span>
+		
+		<span class="previousPost"><?php previous_post_link( '%link', '&larr; Older Posts'); ?></span>
+		<span class="divider"> | </span>
+		<span class="nextPost"><?php next_post_link( '%link', 'Newer Post &rarr;'); ?></span>
 
 	<?php endwhile; endif; ?>	
 	</article>

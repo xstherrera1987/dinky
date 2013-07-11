@@ -14,6 +14,7 @@
 + set Meta Description on a per-page, or per-post basis
 + update/improve search.php for "No Results Found"
 + + update index.php to match update search.php
++ remove 'website' input from comment form
 
 ### Low Priority:
 + adopt / devise framebusting strategy
