@@ -4,6 +4,7 @@
 
 ### High Priority:
 + determine proper way of configuring footer cutoff height
++ fix all issues identified by ThemeUnitTesting
 
 ### Medium Priority:
 + convert all font sizes to **em**
