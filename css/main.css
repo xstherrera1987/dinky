@@ -384,9 +384,10 @@ label[for=comment] {
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(175, 0, 17,.75);
 }
 #submit {
-	background: #FFFFFF;
+	background: #FBFAF7;
+	color: #232323;
+	border-radius: 4px;
 }
-
 
 /******* Posts ************/
 .postNav {
