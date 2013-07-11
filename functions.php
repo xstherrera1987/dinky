@@ -21,7 +21,7 @@ function dinky_setup() {
 function dinky_register_resources() {
 	remove_action('wp_head', 'wp_generator');
 	
-	wp_register_style( "main", get_stylesheet_directory_uri()."css/main.css", FALSE, NULL, "all");
+	wp_register_style( "main", get_stylesheet_directory_uri()."/css/main.css", FALSE, NULL, "all");
 }
 
 
