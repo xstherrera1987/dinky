@@ -33,14 +33,21 @@ function dinky_render_theme_options_page() {
 		<br />
 		<label class="description" for="dinky_theme_options[meta_description]">Meta Description:</label>
 		<textarea id="dinky_theme_options[meta_description]" class="large-text" name="dinky_theme_options[meta_description]"><?php echo $options['meta_description']; ?></textarea>
-		<small>Provides a concise explanation of a Web page's content.  Wide browser support (as of 2013). This is rendered verbatim in &lt;meta name='description' content='...'&gt;. 
-		Beginning and trailing whitespace, and all newlines are trimmed</small>
+		<small>Provide a concise explanation of a Web page's content.  Wide browser support (as of 2013). This is rendered verbatim in &lt;meta name='description' content='...'&gt;. 
+		Beginning and trailing whitespace, and all newlines are removed.</small>
 		<br /><br />
 		
 		<label class="description" for="dinky_theme_options[meta_keywords]">Meta Keywords:</label>
 		<textarea id="dinky_theme_options[meta_keywords]" class="large-text" name="dinky_theme_options[meta_keywords]"><?php echo $options['meta_keywords']; ?></textarea>
-		<small>Provides a list of keywords related to the Web page's content.  Note that as of 2013, this meta tag is rarely considered by search engines.  This is rendered 
-		verbatim in &lt;meta name='keywords' content='...'&gt;  Beginning and trailing whitespace, and all newlines are trimmed</small></small>
+		<small>Provide a list of keywords related to the Web page's content.  Note that as of 2013, this meta tag is rarely considered by search engines.  This is rendered 
+		verbatim in &lt;meta name='keywords' content='...'&gt;  Beginning and trailing whitespace, and all newlines are removed.</small>
+		<br /><br />
+		
+		<label class="description" for="dinky_theme_options[ga_code]">Google Analytics snippet:</label>
+		<textarea id="dinky_theme_options[ga_code]" class="large-text" name="dinky_theme_options[ga_code]"><?php echo $options['ga_code']; ?></textarea>
+		<small>Provide Google Analytics Code Snippet here if you wish to use the traditional GA snippet.  The snippet will be placed immediately before the closing body 
+		tag (eg. &lt;/body&gt;).  If you wish to use the asynchronous GA snippet or require more control over GA tagging, you should install a GA plugin such as 
+		<a href="http://wordpress.org/plugins/google-analytics-for-wordpress/">this one</a>.</small>
 		
 		<p class="submit">
 			<input type="submit" class="button-primary" value="Save Options" />
