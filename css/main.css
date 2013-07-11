@@ -352,7 +352,7 @@ th {
 }
 
 /******* Posts ************/
-.previousPost, .nextPost {
+.postNav {
 	font-size: 12px;
 }
 
