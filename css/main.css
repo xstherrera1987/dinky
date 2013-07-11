@@ -354,6 +354,40 @@ th {
 	font-size: 12px;
 }
 
+#commentform input[type=text], #commentform textarea {
+	font-size: 16px;
+	font-weight: normal;
+	border-radius: 3px;
+}
+#commentform input[type=text] {
+	
+	height:12px;
+	padding: 4px 4px 4px 5px;
+}
+#commentform textarea {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+label[for=comment] {
+	display:block;
+}
+#commentform input[type=text]:focus,
+#commentform textarea:focus {
+	border: 1px solid black;
+	background: #FFFFFF;
+	rgb(175, 0, 17)
+	border-color: rgba(175, 0, 17, 0.8);
+	outline: 0;
+	outline: thin dotted \9;
+
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(175, 0, 17,.75);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(175, 0, 17,.75);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(175, 0, 17,.75);
+}
+#submit {
+	background: #FFFFFF;
+}
+
+
 /******* Posts ************/
 .postNav {
 	font-size: 12px;
