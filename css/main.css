@@ -350,6 +350,9 @@ th {
 #cancel-comment-reply-link {
 	font-size:12px; 
 }
+.commentNav {
+	font-size: 12px;
+}
 
 /******* Posts ************/
 .postNav {

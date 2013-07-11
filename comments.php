@@ -22,6 +22,14 @@
 		
 	<?php endif; ?>
 
+	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+		<nav>
+			<span class="commentNav"><?php previous_comments_link( '&larr; Older Comments' ); ?></span>
+			<span class="divider"> | </span>
+			<span class="commentNav"><?php next_comments_link( 'Newer Comments &rarr;' ); ?></span>
+		</nav>
+	<?php endif; // check for comment navigation ?>
+
 	<?php 
 		comment_form(array(  
 			'comment_notes_before' => '',
