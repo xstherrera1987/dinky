@@ -220,6 +220,11 @@ sub {
 	bottom: 10px;
 }
 
+li > p {
+	display: inline;
+}
+
+/****** search box ************/
 .searchInput {
 	width:40%;
 	float: right;

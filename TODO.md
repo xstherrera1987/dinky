@@ -3,8 +3,7 @@
 + + Then *(low priority)*
 
 ### High Priority:
-+ fix &lt;li&gt; style problem in IE
-+ + there is a line break between the bullet-point and the content
++ add Google Analytics Theme Options input
 
 ### Medium Priority:
 + convert all font sizes to **em**
