@@ -6,14 +6,10 @@
 	<article>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		<!-- TODO make this a button -->
-		<span class="nav-previous"><?php previous_post_link( '%link', 'Previous'); ?></span>
-		
+		<span class="previousPost"><?php previous_post_link( '%link', 'Previous Post'); ?></span>
 		<h1><?php the_title() ?></h1>
 		<?php the_content(); ?>
-			
-		<!-- TODO make this a button -->
-		<span class="nav-next"><?php next_post_link( '%link', 'Next'); ?></span>
+		<span class="nextPost"><?php next_post_link( '%link', 'Next Post'); ?></span>
 
 	<?php endwhile; endif; ?>	
 	</article>

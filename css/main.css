@@ -351,6 +351,11 @@ th {
 	font-size:12px; 
 }
 
+/******* Posts ************/
+.previousPost, .nextPost {
+	font-size: 12px;
+}
+
 /******* banner to inform IE users to upgrade ***********/
 .chromeframe {
 	margin: 0.2em 0;

@@ -3,7 +3,6 @@
 + + Then *(low priority)*
 
 ### High Priority:
-+ make Next Post / Previous Post links into buttons
 + allow comments pagination (show next/previous page links)
 + fix &lt;li&gt; style problem in IE
 + + there is a line break between the bullet-point and the content
