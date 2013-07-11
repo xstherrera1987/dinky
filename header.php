@@ -21,7 +21,6 @@
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 
-<?php if (TRUE == DEBUG) { render_log_styles(); } ?>
 <?php wp_head(); ?>
 </head>
 <body>

@@ -1,10 +1,5 @@
 <?php
-// TODO i18n
-define("DEBUG", TRUE);
-define("THEME", get_template_directory_uri() );
-define("STYLESHEET", get_stylesheet_directory_uri() );
 
-// TODO order these chronologically (order in which WP will execute them)
 add_action( 'after_setup_theme', 'dinky_setup' );
 add_action( 'init', 'dinky_register_resources' );
 add_action( 'widgets_init', 'dinky_widget_init' );
@@ -16,22 +11,39 @@ if ( is_admin() )
  * register the nav menu and perform other setup
  */
 function dinky_setup() {
-	// register the main nav
 	register_nav_menu( 'headerNav', "Header Navigation" );
-	
-	// TODO add theme support
 	add_theme_support("menus");
 }
 
 /**
- * register scripts and styles, perform other setup
+ * register scripts, register styles, perform other setup
  */
 function dinky_register_resources() {
-	// TOOD deregister, remove other useless things
 	remove_action('wp_head', 'wp_generator');
 	
-	define("CSS_DIR", STYLESHEET."/css" );
-	wp_register_style( "main", CSS_DIR."/main.css", FALSE, NULL, "all");
+	wp_register_style( "main", get_stylesheet_directory_uri()."css/main.css", FALSE, NULL, "all");
+}
+
+
+/**
+ * register sidebars
+ */
+function dinky_widget_init() {
+	register_sidebar( array(
+	'name' => 'Footer Widget (no title)',
+	'id' => 'footer_widget',
+	'description' => 'Shown starting from the bottom on the left-hand side.'.
+	' The title cannot be removed from markup, and it is hidden with CSS.',
+	'before_widget' => '',
+	'after_widget' => '',
+	));
+	register_sidebar( array(
+	'name' => '404 Text Widget',
+	'id' => '404_text_widget',
+	'description' => 'Shown on 404 page underneath the header and search form.',
+	'before_widget' => '',
+	'after_widget' => '',
+	));
 }
 
 add_filter('wp_nav_menu','add_header_nav_class');
@@ -73,40 +85,4 @@ function dinky_comment( $comment, $args, $depth ) {
 			</article>
 	<?php
 	endif;
-}
-
-/**
- * register sidebars
- */
-function dinky_widget_init() {
-	register_sidebar( array(
-		'name' => 'Footer Widget (no title)',
-		'id' => 'footer_widget',
-		'description' => 'Shown starting from the bottom on the left-hand side.'.
-						' The title cannot be removed from markup, and it is hidden with CSS.',
-		'before_widget' => '',
-		'after_widget' => '',
-	));
-	register_sidebar( array(
-		'name' => '404 Text Widget',
-		'id' => '404_text_widget',
-		'description' => 'Shown on 404 page underneath the header and search form.',
-		'before_widget' => '',
-		'after_widget' => '',
-	));
-}
-
-/**
- * render CSS debug rules.
- */
-function render_log_styles() { ?>
-	<style>
-		.log {
-			display: block;
-			border: #000000 1px solid;
-			background: #FFFFFF;
-			color: #FF0000;
-		}
-	</style>	
-<?php 
 }

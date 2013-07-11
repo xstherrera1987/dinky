@@ -4,6 +4,7 @@
 
 ### High Priority:
 + add Google Analytics Theme Options input
++ determine proper way of configuring footer cutoff height
 
 ### Medium Priority:
 + convert all font sizes to **em**
@@ -12,6 +13,7 @@
 + set Meta Description on a per-page, or per-post basis
 + update/improve search.php for "No Results Found"
 + + update index.php to match update search.php
++ investigate "add theme support"
 
 ### Low Priority:
 + adopt / devise framebusting strategy

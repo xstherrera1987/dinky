@@ -2,10 +2,7 @@
 
 add_action('admin_init', 'dinky_init_theme_options');
 add_action('admin_menu', 'dinky_add_theme_options_page');
-add_action('admin_print_styles', 'render_log_styles');
 add_action('admin_notices', 'widgets_notice');
-
-if (true == DEBUG) add_action( 'admin_notices', 'dashboard_pagecheck' );
 
 /**
  * initialize theme options
@@ -66,16 +63,6 @@ function dinky_render_theme_options_page() {
 		}
 	</script>
 	<?php
-}
-
-/********* Miscellaneous ******************/
-/**
- * Helper function to display page title
-*/
-function dashboard_pagecheck() {
-	if( !is_admin() ) return;
-	global $pagenow;
-	echo '<p class="log">'.$pagenow.'</p>';
 }
 
 /**
