@@ -11,9 +11,12 @@
 ### Medium Priority:
 + convert all font sizes to **em**
 + + NOTE: consider the default font size of major browsers beforehand
++ convert all border-radius sizes to **em** also
 + set Meta Description on a per-page, or per-post basis	
 + update/improve search.php for "No Results Found"
 + + update index.php to match update search.php
++ fix &lt;li&gt; style problem in IE
++ + there is a line break between the bullet-point and the content
 
 ### Low Priority:
 + adopt / devise framebusting strategy
