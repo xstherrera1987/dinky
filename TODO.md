@@ -5,6 +5,7 @@
 ### High Priority:
 + determine proper way of configuring footer cutoff height
 + fix all issues identified by ThemeUnitTesting
++ + large images cause #main to scroll horizontally
 
 ### Medium Priority:
 + convert all font sizes to **em**

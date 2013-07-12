@@ -41,6 +41,7 @@ body {
 }
 /*************** Master Header ********************/
 .masterHeader {
+	max-width:170px;
 	background-color: #171717;
 	float: left;
 	position: fixed;
@@ -283,8 +284,9 @@ pre {
 	border-radius: 4px;
 	border: 1px solid #D7D8C8;
 	overflow: auto;
-	overflow-y: hidden;
+	
 	margin-bottom: 32px;
+	width: 640px;
 }
 .minified {
 	font-size: 12px;
