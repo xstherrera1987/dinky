@@ -12,6 +12,10 @@
 + + resize &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;
 + + style sticky posts
 + + use post_class() and related functions througout
++ Post navigation (prev/next) needs a div-clear before or to be contained in a div.
++ style img.wp-smiley
++ style WP-Markdown comment help
++ determine why Markdown comments are wrapped in a list and style accordingly.
 
 ### Medium Priority:
 + convert all font sizes to **em**

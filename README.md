@@ -2,6 +2,8 @@ Dinky Wordpress Theme
 --------
 
 + adapted from [Github Pages Dinky Theme](https://github.com/broccolini/dinky) for [my blog](http://xstherrera1987.github.io) (coming soon).
++ complements a few particular plugins:
++ + WP Markdown
 + using Wordpress 3.5, HTML5, CSS3, PHP5. 
 + uses html5shiv and css3-mediaqueries-js for IE 
 + please fork :) and pull requests welcomed
