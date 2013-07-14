@@ -260,13 +260,17 @@ img {
 	height: auto;
 	max-width: 650px;
 	padding: 5px;
-	margin: 10px 0 0px 0;
+	margin: 10px 0 0 0;
 	border: 1px solid #ccc;
 }
-/* TODO revise this */
 img + figcaption {
 	margin: 0 0 32px 0;
 	font-style:italic;
+}
+img.wp-smiley {
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /*********** Code blocks ************************/

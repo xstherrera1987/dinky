@@ -11,9 +11,6 @@
 + + style &lt;dl&gt;, &lt;dt&gt;
 + + resize &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;
 + + style sticky posts
-+ style img.wp-smiley
-+ style WP-Markdown comment help
-+ determine why Markdown comments are wrapped in a list and style accordingly.
 
 ### Medium Priority:
 + convert all font sizes to **em**
