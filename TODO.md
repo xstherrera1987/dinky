@@ -11,8 +11,6 @@
 + + style &lt;dl&gt;, &lt;dt&gt;
 + + resize &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;
 + + style sticky posts
-+ + use post_class() and related functions througout
-+ Post navigation (prev/next) needs a div-clear before or to be contained in a div.
 + style img.wp-smiley
 + style WP-Markdown comment help
 + determine why Markdown comments are wrapped in a list and style accordingly.
@@ -25,6 +23,7 @@
 + investigate "add theme support"
 + investigate configuring fonts through Wordpress
 + set Meta Description on a per-page, or per-post basis
++ investigate twentyeleven's method of setting CSS colors by theme options
 
 ### Low Priority:
 + make IE upgrade banner dismissable (add an X to close)

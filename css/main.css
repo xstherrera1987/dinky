@@ -53,16 +53,17 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 .masterHeader h1, 
-.masterHeader h2, 
+.masterHeader p, 
 .masterHeader a {
 	color: #FFFFFF;
 }
 .masterHeader > h1 > a {
 	text-decoration:none;
 }
-.masterHeader h2 {
+.masterHeader > p {
+	font-family: Arvo, Monaco, serif;
 	font-size: 12px;
-	border-bottom: 0;
+	line-height:15px;
 }
 .masterHeader h1 {
 	font-family: Arvo, sans-serif;

@@ -15,6 +15,9 @@
 <meta name="language" content="<?php echo get_bloginfo('language'); ?>">
 
 <?php wp_enqueue_style("main"); ?>
+<?php if ( is_singular() && get_option( 'thread_comments' ) )
+		wp_enqueue_script( 'comment-reply' ); 
+?>
 
 <!--[if lte IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -23,14 +26,14 @@
 
 <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class($class); ?> >
 	<div class="wrapper">
 		<?php /* TODO set navButton class from site-admin */ ?>
 		<header class="masterHeader fiveNavButtons">
 			<h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2>
+			<p>
 				<?php bloginfo( 'description' ); ?>
-			</h2>
+			</p>
 			<nav>
 			<?php wp_nav_menu( 
 				array(

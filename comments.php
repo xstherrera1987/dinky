@@ -10,7 +10,6 @@
 	<?php if ( have_comments() ) : ?>
 		<h3 id="commentsTitle">Comments</h3>
 
-		<!-- TODO comments pagination -->
 		<ul class="commentlist">
 			<?php
 				wp_list_comments( array( 
@@ -22,13 +21,13 @@
 		
 	<?php endif; ?>
 
-	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav>
+	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ): ?>
+		<div>
 			<span class="commentNav"><?php previous_comments_link( '&larr; Older Comments' ); ?></span>
 			<span class="divider"> | </span>
 			<span class="commentNav"><?php next_comments_link( 'Newer Comments &rarr;' ); ?></span>
-		</nav>
-	<?php endif; // check for comment navigation ?>
+		</div>
+	<?php endif; ?>
 
 	<?php 
 		comment_form(array(  

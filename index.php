@@ -18,12 +18,9 @@
 	<?php else : ?>
 		
 		<article>
-			<header class="entry-header">
-				<h1 class="entry-title">Nothing Found</h1>
-			</header>
+			<h1 class="entry-title">Nothing Found</h1>
 
 			<section>
-				<!-- TODO better message -->
 				<p>No results were found...</p>
 			</section>
 		</article>
