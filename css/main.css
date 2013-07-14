@@ -94,7 +94,6 @@ body {
 	padding: 6px 6px 6px 7px;
 	margin-bottom: 12px;
 	
-	/* TODO linear gradient is not working in IE */
 	background: #AF0011;
 	background: linear-gradient(top, #AF0011 0%,#820011 100%);
 	background: -moz-linear-gradient(top, #AF0011 0%, #820011 100%);
@@ -206,7 +205,7 @@ blockquote {
 }
 hr {
 	border: 0;
-	background: #ccc;
+	background: #CCCCCC;
 	height: 1px;
 	margin: 0 0 24px;
 }
@@ -404,6 +403,13 @@ label[for=comment] {
 /******* Posts ************/
 .postNav {
 	font-size: 12px;
+}
+
+.sticky {
+	padding: 0 0 10px 10px;
+	border-width: 0 0 3px 3px;
+	border-style: solid;
+	border-color: #CCCCCC;
 }
 
 /******* banner to inform IE users to upgrade ***********/

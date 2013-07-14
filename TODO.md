@@ -6,11 +6,9 @@
 + determine proper way of configuring footer cutoff height
 + fix all issues identified by ThemeUnitTesting
 + + large images cause #main to scroll horizontally
-+ + add support for "Featured Images"
 + + fix markup in post titles not taking effect
 + + style &lt;dl&gt;, &lt;dt&gt;
 + + resize &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;
-+ + style sticky posts
 
 ### Medium Priority:
 + convert all font sizes to **em**
@@ -21,6 +19,7 @@
 + investigate configuring fonts through Wordpress
 + set Meta Description on a per-page, or per-post basis
 + investigate twentyeleven's method of setting CSS colors by theme options
++ investigate "Featured Images"
 
 ### Low Priority:
 + make IE upgrade banner dismissable (add an X to close)
