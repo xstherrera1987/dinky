@@ -3,14 +3,33 @@
 + + Then *(low priority)*
 
 ### High Priority:
-+ determine proper way of configuring footer cutoff height
++ configure footer cutoff height by theme option
++ + output CSS Media Query for it in &lt;head&gt;
++ Fix all Theme Check Errors:
++ + REQUIRED:.wp-caption css class is needed in your theme css.
++ + REQUIRED:.wp-caption-text css class is needed in your theme css.
++ + REQUIRED:.gallery-caption css class is needed in your theme css.
++ + REQUIRED:.bypostauthor css class is needed in your theme css.
++ + REQUIRED:.alignright css class is needed in your theme css.
++ + REQUIRED:.alignleft css class is needed in your theme css.
++ + REQUIRED:.aligncenter css class is needed in your theme css.
++ + REQUIRED: This theme doesn't seem to display tags. Modify it to display tags in appropriate locations.
++ + REQUIRED: The theme doesn't have post pagination code in it. Use posts_nav_link() or paginate_links() or next_posts_link() and previous_posts_link() to add post pagination.
++ + REQUIRED: No content width has been defined. 
++ + + <code><?php if ( ! isset( $content_width ) ) $content_width = NNN; ?></code>
++ + WARNING: Found wrong tag, remove TODO from your style.css header.
++ + WARNING: .buildpath .git .gitignore .project .settings Hidden Files or Folders found.
++ + REQUIRED: Please remove any extraneous directories like .git or .svn from the ZIP file before uploading it.
++ + REQUIRED: Could not find wp_link_pages. See: wp_link_pages
++ + + <code><?php wp_link_pages( $args ); ?></code>
++ + REQUIRED: Could not find add_theme_support( 'automatic-feed-links' ). See: add_theme_support.
++ + + <code><?php add_theme_support( $feature ); ?> </code>
 
 ### Medium Priority:
 + convert all font sizes to **rem**
 + + NOTE: consider the default font size of major browsers beforehand
 + convert all border-radius sizes to **rem** also
 + internationalize all text content
-+ investigate "add theme support"
 + investigate configuring fonts through Wordpress
 + set Meta Description on a per-page, or per-post basis
 + investigate twentyeleven's method of setting CSS colors by theme options

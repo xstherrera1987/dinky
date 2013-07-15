@@ -14,15 +14,15 @@
 <meta name="keywords" content="<?php echo $options['meta_keywords']; ?>">
 <meta name="language" content="<?php echo get_bloginfo('language'); ?>">
 
-<?php wp_enqueue_style("main"); ?>
-<?php if ( is_singular() && get_option( 'thread_comments' ) )
-		wp_enqueue_script( 'comment-reply' ); 
-?>
-
 <!--[if lte IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
+
+<?php wp_enqueue_style("main"); ?>
+<?php if ( is_singular() && get_option( 'thread_comments' ) )
+		wp_enqueue_script( 'comment-reply' ); 
+?>
 
 <?php wp_head(); ?>
 </head>
