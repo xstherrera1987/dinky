@@ -4,10 +4,6 @@
 
 ### High Priority:
 + determine proper way of configuring footer cutoff height
-+ fix all issues identified by ThemeUnitTesting
-+ + fix markup in post titles not taking effect
-+ + style &lt;dl&gt;, &lt;dt&gt;
-+ + resize &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;
 
 ### Medium Priority:
 + convert all font sizes to **rem**

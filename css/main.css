@@ -155,15 +155,13 @@ footer aside ul > li > a {
 
 /***************** Headers *****************************/
 h1, h2, h3, h4, h5, h6 {
+	font-family: Arvo, Monaco, serif;
 	color: #232323;
 	margin: 24px 0 10px;
 }
 h1, h2, h3 {
-	font-family: Arvo, Monaco, serif;
 	line-height: 1.3;
 	font-weight: normal;
-}
-h1, h2, h3 {
 	display: block;
 	border-bottom: 1px solid #CCCCCC;
 	padding-bottom: 5px;
@@ -178,10 +176,12 @@ h3 {
 	font-size: 16px;
 }
 h4, h5, h6 {
-	font-family: Arvo, Monaco, serif;
-	font-weight: 700;
 	font-size:14px;
 }
+h5, h6 {
+	font-size:12px;
+}
+
 /*********** Text Elements **************/
 p, ul, ol, table, dl {
 	margin: 0 0 14px;
@@ -236,6 +236,20 @@ sub {
 
 li > p {
 	display: inline;
+}
+
+dl dt {
+  font-weight: bold;
+}
+
+dl dd {
+  padding-left: 20px;
+  font-style: italic;
+}
+
+dl p {
+  padding-left: 20px;
+  font-style: italic;
 }
 
 /****** search box ************/
