@@ -73,7 +73,7 @@ function dinky_comment( $comment, $args, $depth ) {
 			<p>Pingback: <?php comment_author_link(); ?><?php edit_comment_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 	else: ?>
-		<li <?php comment_class(); ?> >
+		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 			<article class="comment">
 				<div class="comment-content">
 					<?php comment_text(); ?>
