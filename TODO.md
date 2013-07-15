@@ -5,15 +5,14 @@
 ### High Priority:
 + determine proper way of configuring footer cutoff height
 + fix all issues identified by ThemeUnitTesting
-+ + large images cause #main to scroll horizontally
 + + fix markup in post titles not taking effect
 + + style &lt;dl&gt;, &lt;dt&gt;
 + + resize &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;
 
 ### Medium Priority:
-+ convert all font sizes to **em**
++ convert all font sizes to **rem**
 + + NOTE: consider the default font size of major browsers beforehand
-+ convert all border-radius sizes to **em** also
++ convert all border-radius sizes to **rem** also
 + internationalize all text content
 + investigate "add theme support"
 + investigate configuring fonts through Wordpress
@@ -29,3 +28,5 @@
 ### Future:
 + cut a branch for version 2 to implement:
 + + easily configurable color scheme (WP inputs for the 2 or 3 colors actually used)
++ refactor CSS for mobile-first CSS
++ + media queries for larger screens

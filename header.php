@@ -26,7 +26,7 @@
 
 <?php wp_head(); ?>
 </head>
-<body <?php body_class($class); ?> >
+<body <?php body_class(); ?> >
 	<div class="wrapper">
 		<?php /* TODO set navButton class from site-admin */ ?>
 		<header class="masterHeader fiveNavButtons">

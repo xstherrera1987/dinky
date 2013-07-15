@@ -38,13 +38,25 @@ body {
 	float: right;
 	padding-bottom: 50px;
 	margin-top: 0;
+	
+	
+	/*
+	margin-left: 300px;
+	position:absolute;
+	*/
 }
+
+#main * {
+	max-width: 640px;
+}
+
 /*************** Master Header ********************/
 .masterHeader {
-	max-width:170px;
+	width:170px;
 	background-color: #171717;
 	float: left;
 	position: fixed;
+	
 	border: 1px solid #000;
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
@@ -84,6 +96,7 @@ body {
 	list-style-type: none;
 	padding-left: 0;
 }
+
 .navButton {
 	font-weight: normal;	
 	line-height: 1em;
@@ -257,8 +270,8 @@ img {
 	margin: 0 auto;
 	width: auto;
 	height: auto;
-	max-width: 650px;
-	padding: 5px;
+	max-width: 640px !important;
+	padding: 3px;
 	margin: 10px 0 0 0;
 	border: 1px solid #ccc;
 }
