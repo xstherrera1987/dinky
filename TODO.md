@@ -1,6 +1,8 @@
 ### Top Priority:
 + Implement all basic functionality needed to use this theme for my blog
 + + Then *(low priority)*
++ paginate index.php 
++ + or look into why all the posts are not shown
 
 ### High Priority:
 + configure footer cutoff height by theme option
@@ -34,6 +36,7 @@
 + set Meta Description on a per-page, or per-post basis
 + investigate twentyeleven's method of setting CSS colors by theme options
 + investigate "Featured Images"
++ investigate adding .ico files in Theme Options
 
 ### Low Priority:
 + make IE upgrade banner dismissable (add an X to close)

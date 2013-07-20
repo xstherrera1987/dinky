@@ -252,6 +252,19 @@ dl p {
   font-style: italic;
 }
 
+::-moz-selection {
+	color: #FFFFFF;
+	background-color: #232323;
+}
+::-webkit-selection {
+	color: #FFFFFF;
+	background-color: #232323;	
+}
+::selection {
+	color: #FFFFFF;
+	background-color: #232323;
+}
+
 /****** search box ************/
 .searchInput {
 	width:40%;
