@@ -1,8 +1,8 @@
 ### Top Priority:
 + Implement all basic functionality needed to use this theme for my blog
 + + Then *(low priority)*
-+ paginate index.php 
-+ + or look into why all the posts are not shown
++ paginate index.php (prefer infinite scroll)
++ + and look into why all the posts are not shown
 
 ### High Priority:
 + configure footer cutoff height by theme option
@@ -28,6 +28,7 @@
 + + + <code><?php add_theme_support( $feature ); ?> </code>
 
 ### Medium Priority:
++ use name of previous post / next post in post navigation.
 + convert all font sizes to **rem**
 + + NOTE: consider the default font size of major browsers beforehand
 + convert all border-radius sizes to **rem** also

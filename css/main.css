@@ -87,23 +87,33 @@ body {
 	border-top: 0;
 }
 
-/* Master Header: the black heading with nav buttons and site title */
-.masterHeader ul {
+/* Main Navigation */
+/* ul.menu */
+.masterHeader .menu {
 	list-style: none;
 	padding: 0;
+	
 }
-.masterHeader li {
+
+/* li.menu-item */
+.masterHeader .menu-item {
 	list-style-type: none;
 	padding-left: 0;
 }
-
+/* ul.sub-menu */
+.masterHeader .sub-menu {
+	height: 0;
+	display: none; 
+}
+/* a.navButton */
 .navButton {
 	font-weight: normal;	
 	line-height: 1em;
+	overflow: hidden;
 	
 	display: block;
 	width: 152px;
-	height: 15px;
+	
 	padding: 6px 6px 6px 7px;
 	margin-bottom: 12px;
 	
@@ -122,6 +132,18 @@ body {
 	background: #C3001D;
 	background: linear-gradient(top, #C3001D 0%,#950119 100%);
 	text-decoration: none;
+}
+
+.menu-item:hover .sub-menu {
+	height: 100px;
+	display: block;
+	position: relative;
+    left:10px;
+}
+
+/* push next menu-item down out of the way */
+.menu-item:hover .menu-item {
+	float: left;
 }
 
 /************ Footer **********************************/
