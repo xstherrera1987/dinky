@@ -1,3 +1,5 @@
+## Theme TODO
+
 ### Top Priority:
 + Implement all basic functionality needed to use this theme for my blog
 + + Then *(low priority)*
@@ -26,6 +28,8 @@
 + + + <code><?php wp_link_pages( $args ); ?></code>
 + + REQUIRED: Could not find add_theme_support( 'automatic-feed-links' ). See: add_theme_support.
 + + + <code><?php add_theme_support( $feature ); ?> </code>
++ nav buttons are not styled if a menu is not chosen in Appearance -> Menus
++ + .navButton is not added to &lt;a&gt; tags
 
 ### Medium Priority:
 + use name of previous post / next post in post navigation.
