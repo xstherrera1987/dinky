@@ -482,10 +482,17 @@ label[for=comment] {
 	padding: 0.2em 0;
 }
 
+/** wordpress.com stats GIF **/
+img#wpstats {
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+
 /************************* Media Queries ******************************/
 
 /* TODO find optimal footer cut-off height for all navigation button counts */
- 
+
 /* regular width, but really short window: fix footer overlapping header */
 @media screen and (max-height: 480px) and (min-width: 960px) {
 	

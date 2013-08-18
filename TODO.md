@@ -5,6 +5,8 @@
 + + Then *(low priority)*
 + paginate index.php (prefer infinite scroll)
 + + and look into why all the posts are not shown
++ update front page to only show preview of posts
++ + featured image and some text
 
 ### High Priority:
 + configure footer cutoff height by theme option
@@ -42,6 +44,7 @@
 + investigate twentyeleven's method of setting CSS colors by theme options
 + investigate "Featured Images"
 + investigate adding .ico files in Theme Options
++ make page templates with various amounts/sizes of widget areas
 
 ### Low Priority:
 + make IE upgrade banner dismissable (add an X to close)
